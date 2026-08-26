@@ -13,6 +13,8 @@ results/parsed/
 results/*.jsonl
 results/*.png
 results/*.csv
+# 子目录 figures 与 analysis 都不入库（默认产物，本地查看用）
+results/analysis/
 
 # 临时
 _vendor/
