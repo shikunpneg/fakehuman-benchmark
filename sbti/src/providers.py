@@ -7,6 +7,7 @@
 API Key 统一从环境变量读取（.env 见 .env.example），不进代码、不进 git。
 """
 from __future__ import annotations
+from pathlib import Path
 
 import os
 import time
@@ -31,17 +32,17 @@ PROVIDERS = {
         "models": ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k", "kimi-k2-0711-preview"],
         "api_key_env": "MOONSHOT_API_KEY",
     },
-    "4sapi": {
-        # 4sapi 中转：URL https://4sapi.{org,cn,net,ai} 或 https://4stoken.com + /v1；
-        # 一 Key 通多模型（Kimi / GLM / Claude / MiniMax 等）
-        # base_url: 国内任选其一，海外 4sapi.com
-        "base_url": "https://4sapi.cn/v1",
+    "4api": {
+        # 4sapi.com 中转（4sapi 国内域名解析到 154.17.20.134，海外 4sapi.com 被 Facebook 抢注）
+        # 实测 MOONSHOT_API_KEY / ZHIPU_API_KEY / hy3_api_key 都绑在"国产全模型 (0.8x)"分组
+        # 该分组下可用模型（实测 HTTP 200）：
+        #   - kimi-k2-thinking  ✓
+        # 其他常见模型名（glm-4-flash / hunyuan-pro 等）→ 503 No available channel
+        "base_url": "https://4sapi.org/v1",
         "models": [
-            "claude-sonnet-4-5-20250929",
-            # 待用户在 4sapi 模型广场确认后追加：moonshot-v1-8k / glm-4-flash / minimax-Text-01
+            "kimi-k2-thinking",   # Kimi k2 thinking（4sapi 官方名）
         ],
-        # 4sapi key 统一通过 FOURAPI_API_KEY 提供（SK-xxx 格式）
-        "api_key_env": "FOURAPI_API_KEY",
+        "api_key_env": "MOONSHOT_API_KEY",  # 任一绑"国产全模型"分组的 key 均可
     },
     "zhipu": {
         "base_url": "https://open.bigmodel.cn/api/paas/v4",
@@ -51,7 +52,7 @@ PROVIDERS = {
     "ark": {  # 火山方舟（字节豆包），model 需填 endpoint ID
         "base_url": "https://ark.cn-beijing.volces.com/api/v3",
         "models": ["doubao-1-5-pro-32k-250115"],
-        "api_key_env": "ARK_API_KEY",
+        "api_key_env": "ARK_API_KEY",  # 也可用 DOUBAO_API_KEY（用户填的 ark 格式 key）
     },
     "minimax": {
         "base_url": "https://api.minimax.chat/v1",
@@ -92,6 +93,23 @@ def _key_for(provider: str) -> str:
     if not key:
         raise ProviderError(f"{provider}: 缺少环境变量 {env}（见 .env.example）")
     return key
+
+
+def load_env_smart() -> None:
+    """从仓库根加载 .env（兼容 cwd 不确定场景）。已加载则跳过。"""
+    if os.environ.get("__SBTI_ENV_LOADED__"):
+        return
+    from dotenv import load_dotenv
+    # __file__ 在 src/providers.py；其 parent.parent.parent = 仓库根
+    project_root = Path(__file__).resolve().parent.parent.parent
+    env_path = project_root / ".env"
+    if env_path.exists():
+        load_dotenv(env_path)
+    os.environ["__SBTI_ENV_LOADED__"] = "1"
+
+
+# 模块加载时即尝试加载（兼容 collect / probe 各处）
+load_env_smart()
 
 
 def chat_completion(provider: str, model: str, messages: list[dict],
