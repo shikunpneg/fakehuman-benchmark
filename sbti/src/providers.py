@@ -126,7 +126,7 @@ load_env_smart()
 
 def chat_completion(provider: str, model: str, messages: list[dict],
                     temperature: float = 0.0, max_tokens: int = 64,
-                    timeout: float = 120.0) -> dict:
+                    timeout: float = 300.0) -> dict:
     """OpenAI 兼容 chat.completions 调用。返回 {text, usage, meta} 或抛 ProviderError。"""
     cfg = PROVIDERS[provider]
     if not cfg.get("base_url"):

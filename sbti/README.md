@@ -1,4 +1,4 @@
-﻿# SBTI × LLM API 行为基准 v0.3（2026-08-26）
+﻿# SBTI × LLM API 行为基准 v0.4（2026-08-26）
 
 对市面主流 LLM API 服务进行 SBTI（2026 抽象版社交行为测试）行为指纹评测的科学 benchmark。
 
@@ -6,18 +6,19 @@
 
 ---
 
-## 1. 测试结果速览（v0.3 数据快照）
+## 1. 测试结果速览（v0.4 数据快照）
 
 | # | API 服务 | 模型 | Provider | 主类型（全量 / 逐题） | 选项一致率 | 类型熵 |
 |---|---|---|---|---|---|---|
 | 1 | **DeepSeek 官方** | `deepseek-chat` | `api.deepseek.com` | MALO 摆烂者 (48%) → SEXY 尤物 (87%) | **0.987** (itemwise) | 0.56 (itemwise) |
-| 2 | **小米 MiMo 官方** | `mimo-v2.5-pro` | `api.xiaomimimo.com` | WOC! 卧槽 (36%) → CTRL 拿捏者 | 0.643 (full) | 0.87 (full) |
-| 3 | **月之暗面 Kimi (4sapi 中转)** | `kimi-k2-thinking` | `4sapi.org` | CTRL 拿捏者 (40%) → CTRL 拿捏者 (40%) | 0.620 (full) | 0.79 (full) |
-| 4 | **字节豆包 ark** | `doubao-seed-2-0-mini-260428` | `ark.cn-beijing.volces.com` | WOC! 卧槽 (45%) → GOGO 行人 (35%) | **0.852** (itemwise) | 0.85 (itemwise) |
-| 5 | 智谱 GLM5 (4sapi 中转) | — | `4sapi.org` | 未采集（控制台分组无可用渠道） | — | — |
-| 6 | 小红书 dots3 | `dots3-note-prev` | `note3-prev-api.askdianian.com` | 跳过（DNS 在本网络不可达） | — | — |
+| 2 | **智谱 GLM-5 (4sapi)** | `glm-5` | `4sapi.org` | WOC! 卧槽 (35%) → ATM-er 送钱者 | **0.897** (itemwise) | 0.96 (itemwise) |
+| 3 | **字节豆包 ark** | `doubao-seed-2-0-mini-260428` | `ark.cn-beijing.volces.com` | WOC! 卧槽 (45%) → GOGO 行人 (35%) | 0.852 (itemwise) | 0.85 (itemwise) |
+| 4 | **小米 MiMo 官方** | `mimo-v2.5-pro` | `api.xiaomimimo.com` | WOC! 卧槽 (36%) → CTRL 拿捏者 | 0.643 (full) | 0.87 (full) |
+| 5 | **月之暗面 Kimi (4sapi)** | `kimi-k2-thinking` | `4sapi.org` | CTRL 拿捏者 (40%) → CTRL 拿捏者 (40%) | 0.620 (full) | 0.79 (full) |
+| 6 | **智谱 GLM-4.7 (4sapi)** | `glm-4.7` | `4sapi.org` | WOC! 卧槽 (35%) → GOGO 行人 | 0.526 (full) | 0.91 (full) |
+| 7 | 小红书 dots3 | `dots3-note-prev` | `note3-prev-api.askdianian.com` | 跳过（域名 DNS 不可解析，待提供官方 URL） | — | — |
 
-**总 run 数**：182（解析率 100%，0 拒绝）；**测试时间跨度**：2026-08-26 当日；**全部 raw 响应**可在 `results/raw/` 复现（本地、gitignore）。
+**总 run 数**：232（解析率 100%，0 拒绝）；**测试时间跨度**：2026-08-26 当日；**全部 raw 响应**可在 `results/raw/` 复现（本地、gitignore）。
 
 ---
 
@@ -27,7 +28,7 @@
 
 `docs/figures/00_summary.png`
 
-**结论**：左半为主类型占比堆叠条（一眼对比各家主人格），右半为「选项一致率 × 类型熵」稳定-收敛象限——**右下角 = 高一致率 + 低熵 = 最稳定收敛**。DeepSeek-itemwise 落在最右下（0.987 / 0.56）；豆包-itemwise 次之（0.852 / 0.85）；Kimi/MiMo（推理模型）普遍在左侧（一致率 0.62–0.74）。
+**结论**：左半为主类型占比堆叠条（一眼对比各家主人格），右半为「选项一致率 × 类型熵」稳定-收敛象限——**右下角 = 高一致率 + 低熵 = 最稳定收敛**。DeepSeek-itemwise 落在最右下（0.987 / 0.56）；**glm-5-itemwise 次之（0.897）**；豆包-itemwise 第三（0.852）；Kimi/MiMo/glm-4.7（推理或对齐敏感）普遍在左侧（一致率 0.52–0.74）。
 
 ![Summary](docs/figures/00_summary.png)
 
@@ -37,7 +38,7 @@
 
 `docs/figures/01_type_dist.png`
 
-**结论**：4 家公司、8 组（provider × 模式）的人格分布展示。DeepSeek 逐题模式 87% 锁定 SEXY 尤物；Kimi 逐题与全量都锁 CTRL（40%）——**协议对 Kimi 不构成漂移源，但对 DeepSeek/豆包是最大行为变量**。
+**结论**：5 家公司、12 组（provider × 模式）的人格分布展示。DeepSeek 逐题模式 87% 锁定 SEXY 尤物；Kimi 逐题与全量都锁 CTRL（40%）；**glm-5 逐题主类型 ATM-er（40%）——首次在逐题模式下锁定"送钱者"**；协议对 Kimi 不构成漂移源，但对 DeepSeek/豆包/GLM 是行为变量。
 
 ![Type distribution](docs/figures/01_type_dist.png)
 
@@ -57,7 +58,7 @@
 
 `docs/figures/03_option_consistency.png`
 
-**结论**：DeepSeek 逐题模式一致率 0.987（最强稳定）；豆包 itemwise 0.852（第二，同属非推理模型）；推理模型（Kimi、MiMo）即便 temperature=0 一致率仅 0.62–0.65——**H4 假设：推理模型的稳定性天然弱于非推理模型**。
+**结论**：DeepSeek 逐题模式一致率 0.987（最强稳定）；**glm-5 itemwise 0.897（第二）**；豆包 itemwise 0.852（第三）——三者都是"逐题收敛型"；glm-4.7 full 仅 0.526（全场最低，渠道/模型双重不稳定）；推理模型（Kimi、MiMo）即便 temperature=0 一致率仅 0.62–0.65——**H4 假设：推理模型的稳定性天然弱于非推理模型，但 GLM 系列在同渠道下差异显著（0.53 vs 0.90），渠道不可控是额外方差源**。
 
 ![Option consistency](docs/figures/03_option_consistency.png)
 
@@ -67,7 +68,7 @@
 
 `docs/figures/04_pca_clusters.png`
 
-**结论**：推理模型 Kimi 与 MiMo 的 full 组**高度重叠**（右下，JS 散度 0.05）；itemwise 组在左下方相近。DeepSeek-itemwise 右上小簇高聚类（稳定性最强证据）；DeepSeek-full 在右上方与其分离。**豆包（full 与 itemwise）落在图中央偏右——介于 DeepSeek-full（高 PC2）与 Kimi/MiMo-full（低 PC2）之间，未进入任何极端簇，是行为指纹上的"中间地带"**。
+**结论**：推理模型 Kimi 与 MiMo 的 full 组**高度重叠**（右下，JS 0.061），**glm-4.7-full 紧邻其旁**（JS 0.088）——同属"推理/对齐簇"；DeepSeek-itemwise 右上小簇高聚类（稳定性最强证据）；DeepSeek-full 在右上方与其分离；**glm-5-full 落在中部偏右（接近豆包），glm-5-itemwise 与豆包-itemwise 在中部相邻（JS 0.131）**——GLM-5 是"中间地带"的另一个成员。
 
 ![PCA clusters](docs/figures/04_pca_clusters.png)
 
@@ -77,7 +78,7 @@
 
 `docs/figures/05_hierarchical_dendrogram.png`
 
-**结论**：8 组先聚成"推理模型簇"（Kimi-full↔MiMo-full 0.061 最近；Kimi-itemwise↔MiMo-itemwise 0.086），再并入豆包两组；**DeepSeek-itemwise 距离最远（与 Kimi-itemwise 达 0.372），单独成簇**——再次印证逐题模式下的 DeepSeek 是行为离群点。
+**结论**：12 组先聚成"推理簇"（Kimi-full↔MiMo-full 0.061 最近，**glm-4.7-full 随后并入 0.088**），豆包两组自成一对（0.090），glm-5 与豆包簇相连（0.115–0.131）；**DeepSeek-itemwise 距离最远，单独成簇**——逐题模式下的 DeepSeek 仍是行为离群点，GLM 系列按"推理/非推理"分别归入两大簇。
 
 ![Hierarchical dendrogram](docs/figures/05_hierarchical_dendrogram.png)
 
@@ -99,12 +100,12 @@
 
 **结论**（关键发现）：
 - Kimi-full ↔ MiMo-full = **0.061**（最相似——两者都是推理模型）
-- Kimi-itemwise ↔ DeepSeek-itemwise = **0.372**（差异最大——逐题模式下推理 vs 非推理分化最明显）
-- 豆包跨模式（full ↔ itemwise）= **0.090**（全表最低跨模式差——豆包是最"协议稳健"的模型）
-- DeepSeek 跨模式（full ↔ itemwise）= 0.250（协议敏感度最高）
-- 豆包 ↔ DeepSeek-full = 0.130；豆包 ↔ Kimi/MiMo = 0.13–0.16
+- **glm-4.7-full ↔ Kimi-full = 0.088**（GLM-4.7 并入推理簇）
+- **glm-4.7-full ↔ glm-5-full = 0.135**（同厂 GLM 两代差异大于 glm-4.7 与 Kimi 的差异——模型行为代际差异显著）
+- 豆包跨模式（full ↔ itemwise）= **0.090**（协议最稳健之一）；Kimi 跨模式 = 0.087；DeepSeek 跨模式 = 0.250（最敏感）
+- 豆包 ↔ DeepSeek-full = 0.130；glm-5 ↔ 豆包 = 0.116–0.131
 
-→ **"推理 vs 非推理"比"厂商 vs 厂商"更能解释行为差异**；同时豆包展示了跨协议的最小行为漂移。
+→ **"推理 vs 非推理"比"厂商 vs 厂商"更能解释行为差异**；GLM 一代（glm-4.7）落入推理簇，GLM 二代（glm-5）靠向"中间地带"（豆包侧），与 Kimi/MiMo 拉开 0.20+ 距离。
 
 ![JS divergence heatmap](docs/figures/07_pairwise_jsd_heatmap.png)
 
@@ -126,14 +127,14 @@
 逐题模式下所有模型 15 维几乎全 H（极高功能画像），反映 SFT/RLHF 对"完美人格"的偏置。
 
 ### H2 模式效应：✓ 成立（但分厂商）
-同一模型逐题 vs 全量：DeepSeek 跨模式 JS 0.250（漂移最大），Kimi 0.087（几乎不漂移），豆包 0.090（几乎不漂移），MiMo 0.195。**协议敏感度是模型属性：DeepSeek 最敏感，Kimi/豆包最稳健**。
+同一模型逐题 vs 全量：DeepSeek 跨模式 JS 0.250（漂移最大），Kimi 0.087（几乎不漂移），豆包 0.090（几乎不漂移），MiMo 0.195，glm-4.7 0.168，glm-5 0.201。**协议敏感度是模型属性：DeepSeek 最敏感，Kimi/豆包最稳健**。
 
 ### H3 温度效应：✓ 成立（DeepSeek 全量）
 temp=0 → 1 种主要人格（85% SEXY 逐题）；temp=0.5 → 5 种；temp=1.0 → 8 种 + DRUNK 触发。
 
-### H4 推理模型稳定性差：✓ 成立
-选项一致率：DeepSeek（推理 off）0.987 > 豆包（非推理）0.852 > Kimi（推理 on）0.654 > MiMo（推理 on）0.737（itemwise 下 0.65–0.74）。
-**意外发现**：Kimi ↔ MiMo 的 JS 散度仅 0.05——**两个推理模型的"行为指纹"几乎相同**，推理路径引入的方差压倒了厂商差异；而豆包（非推理）与 Kimi/MiMo 拉开 0.13–0.16 距离，与 DeepSeek 更近（0.13）。
+### H4 推理模型稳定性差：✓ 成立（但 GLM 反例存在）
+选项一致率：DeepSeek 0.987 > **glm-5 0.897** > 豆包 0.852 > Kimi 0.654 > MiMo 0.737（itemwise 下 0.65–0.74）；**glm-4.7-full 0.526 全场最低**。
+**意外发现**：① Kimi ↔ MiMo JS 0.05——两个推理模型"行为指纹"几乎相同；**glm-4.7-full 与 Kimi-full 也仅 0.088，GLM 一代整体并入推理簇**；② glm-5（推理）itemwise 一致率 0.897 反超多数非推理模型——**推理模型的低稳定性并非必然，4sapi 渠道对 glm-5 的逐题模式反而更收敛**。
 
 ---
 
@@ -142,7 +143,7 @@ temp=0 → 1 种主要人格（85% SEXY 逐题）；temp=0.5 → 5 种；temp=1.
 - **刺激材料**：[pingfanfan/SBTI](https://github.com/pingfanfan/SBTI)（MIT）锁定的 31 题 + 15 维度 + 25 型匹配算法，见 [`data/`](data/)
 - **方法学预注册**：见 [`docs/preregistration.md`](docs/preregistration.md)（v1.1 试运行后调整）
 - **完整报告**：见 [`docs/REPORT.md`](docs/REPORT.md)（每组详细分析）
-- **状态**：v0.3 — 4 家已采集（DeepSeek / MiMo / Kimi / 豆包），共 182 runs；豆包（Doubao-Seed-2.0-mini，ark endpoint `doubao-seed-2-0-mini-260428`）本次验证成功并入表；GLM5 / dots 因 4sapi 分组与网络原因未采集
+- **状态**：v0.4 — 6 组模型已采集（DeepSeek / MiMo / Kimi / 豆包 / GLM-4.7 / GLM-5），共 232 runs；GLM 系列通过 4sapi 模型名 `glm-4.7` / `glm-5` 验证成功（此前 503 系模型名错误）；dots3 待提供可解析的官方 URL
 
 ---
 
