@@ -37,10 +37,13 @@ PROVIDERS = {
         # 实测 MOONSHOT_API_KEY / ZHIPU_API_KEY / hy3_api_key 都绑在"国产全模型 (0.8x)"分组
         # 该分组下可用模型（实测 HTTP 200）：
         #   - kimi-k2-thinking  ✓
-        # 其他常见模型名（glm-4-flash / hunyuan-pro 等）→ 503 No available channel
+        #   - glm-4.7  ✓（智谱 GLM，非推理）
+        #   - glm-5    ✓（智谱 GLM-5，推理模型，带 reasoning_content）
         "base_url": "https://4sapi.org/v1",
         "models": [
             "kimi-k2-thinking",   # Kimi k2 thinking（4sapi 官方名）
+            "glm-4.7",            # GLM-4.7（实测可用）
+            "glm-5",              # GLM-5 推理版（实测可用）
         ],
         "api_key_env": "MOONSHOT_API_KEY",  # 任一绑"国产全模型"分组的 key 均可
     },

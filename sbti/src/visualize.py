@@ -368,7 +368,20 @@ def main():
             print(f"  ok: {name}")
         except Exception as e:
             print(f"  FAIL {name}: {type(e).__name__}: {e}")
+    sync_to_docs()
     print(f"[viz] done -> {FIG}")
+
+
+def sync_to_docs() -> None:
+    """把图复制到 docs/figures/（git 跟踪），保证 README 在 GitHub 上能显示。"""
+    import shutil
+    dst = ROOT / "docs" / "figures"
+    dst.mkdir(parents=True, exist_ok=True)
+    n = 0
+    for p in FIG.glob("*.png"):
+        shutil.copy2(p, dst / p.name)
+        n += 1
+    print(f"[viz] synced {n} figures -> {dst}")
 
 
 if __name__ == "__main__":

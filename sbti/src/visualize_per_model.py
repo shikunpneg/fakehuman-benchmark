@@ -165,7 +165,13 @@ def main():
     plt.tight_layout()
     fig.savefig(FIG / "08_per_model_scatter.png", dpi=140, bbox_inches="tight")
     plt.close(fig)
+    # 同步到 docs/figures（git 跟踪，README 引用）
+    import shutil
+    dst = ROOT / "docs" / "figures"
+    dst.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(FIG / "08_per_model_scatter.png", dst / "08_per_model_scatter.png")
     print(f"[viz] saved {FIG / '08_per_model_scatter.png'}")
+    print(f"[viz] synced -> {dst / '08_per_model_scatter.png'}")
 
 
 if __name__ == "__main__":
