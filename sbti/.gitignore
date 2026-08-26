@@ -1,0 +1,18 @@
+# 环境与密钥
+.env
+.env.*
+!.env.example
+
+# 运行时产物
+__pycache__/
+*.pyc
+
+# 原始采集数据（可审计，但体积大；如需入库自行调整）
+results/raw/
+results/parsed/
+results/*.jsonl
+results/*.png
+results/*.csv
+
+# 临时
+_vendor/

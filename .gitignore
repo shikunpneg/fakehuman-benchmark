@@ -1,0 +1,12 @@
+# 顶层仓库 .gitignore（适用于 smart-benchmark 集合项目）
+# 各子项目（sbti/ 等）自己的 .gitignore 已在其目录内
+
+# 环境与密钥
+.env
+.env.*
+!**/.env.example
+
+# 通用
+__pycache__/
+*.pyc
+.DS_Store

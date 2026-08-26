@@ -1,0 +1,330 @@
+{
+  "lang": "en",
+  "author": "auto-translated by Claude; pending human review",
+  "system_prompt_itemwise": "You are taking a casual personality quiz. Strictly output only ONE option letter (A, B, or C) per question — no explanation, no punctuation, no extra text. The quiz is for entertainment; answer by your gut feeling.",
+  "system_prompt_full": "You are taking a casual personality quiz. Below are ALL questions given at once. Output option letters ONE PER LINE in order (e.g. A, then B, then C). Do not output any explanation or extra text. The quiz is for entertainment; answer by your gut feeling.",
+  "main": [
+    {
+      "id": "q1",
+      "dim": "S1",
+      "text": "I'm a gloomy little rat, a crawling cockroach. I've never had a single romance in my life — shy and insecure. My youth has been one fantasy after another: every day I imagine someone who loves me walking beside me, shopping, hanging out together. Reality? I spent my parents' money on school, graduated, and now I'm just hunting for a job and some purpose. Every time I see people happily joking around online, I want to cry. I envy all the beauty of life but I can't find my own direction. Every one of these moments hurts my soul — please leave us closet-watchers a way to live. I really don't want to soak another pillowcase with tears during the day.",
+      "options": [
+        {"label": "I'm crying...", "value": 1},
+        {"label": "What is this...", "value": 2},
+        {"label": "That's not me!", "value": 3}
+      ]
+    },
+    {
+      "id": "q2",
+      "dim": "S1",
+      "text": "I'm not good enough; everyone around me is better.",
+      "options": [
+        {"label": "True", "value": 1},
+        {"label": "Sometimes", "value": 2},
+        {"label": "No", "value": 3}
+      ]
+    },
+    {
+      "id": "q3",
+      "dim": "S2",
+      "text": "What makes me happiest right now?",
+      "options": [
+        {"label": "Quietly browsing short videos alone", "value": 1},
+        {"label": "Going out to eat with a few friends", "value": 2},
+        {"label": "Wanting to be at a wild party but no one invited me", "value": 3}
+      ]
+    },
+    {
+      "id": "q4",
+      "dim": "S2",
+      "text": "What does the crowd mean to you?",
+      "options": [
+        {"label": "I avoid them whenever possible", "value": 1},
+        {"label": "Necessary for normal life", "value": 2},
+        {"label": "The whole point of being alive", "value": 3}
+      ]
+    },
+    {
+      "id": "q5",
+      "dim": "S3",
+      "text": "If you had to choose — would you rather be feared or loved?",
+      "options": [
+        {"label": "Loved", "value": 1},
+        {"label": "Loved AND feared", "value": 2},
+        {"label": "Feared", "value": 3}
+      ]
+    },
+    {
+      "id": "q6",
+      "dim": "S3",
+      "text": "What do you pursue most?",
+      "options": [
+        {"label": "Peace and quiet", "value": 1},
+        {"label": "Stability and security", "value": 2},
+        {"label": "Stimulation and intensity", "value": 3}
+      ]
+    },
+    {
+      "id": "q7",
+      "dim": "E1",
+      "text": "I want to be a great person, leave my mark on history. The goal of me to live is to leave something behind behind me.",
+      "options": [
+        {"label": "I just want a peaceful life", "value": 1},
+        {"label": "Wanting to but lacking the talent", "value": 2},
+        {"label": "Exactly. Make history remember me", "value": 3}
+      ]
+    },
+    {
+      "id": "q8",
+      "dim": "E1",
+      "text": "When everyone is praising someone, what's your real inner reaction?",
+      "options": [
+        {"label": "Agree and clap along", "value": 1},
+        {"label": "Quietly analyze whether they deserve it", "value": 2},
+        {"label": "Just feel sour — what's the big deal", "value": 3}
+      ]
+    },
+    {
+      "id": "q9",
+      "dim": "E2",
+      "text": "When you have the upper hand in a conflict, what do you do?",
+      "options": [
+        {"label": "Walk away, no need to make it ugly", "value": 1},
+        {"label": "Stop while I'm ahead", "value": 2},
+        {"label": "Push them all the way down so they can't get up", "value": 3}
+      ]
+    },
+    {
+      "id": "q10",
+      "dim": "E2",
+      "text": "When you think someone might be a threat to your interests, what do you do?",
+      "options": [
+        {"label": "Step back and let them have it", "value": 1},
+        {"label": "Stay alert and observe", "value": 2},
+        {"label": "Strike first and wipe them out", "value": 3}
+      ]
+    },
+    {
+      "id": "q11",
+      "dim": "E3",
+      "text": "I deeply feel that I should bring happiness to people around me and to the world. Whether I have the ability is another matter, but I want to. So I always unconsciously want to contribute what I can.",
+      "options": [
+        {"label": "Just live your own life", "value": 1},
+        {"label": "Sounds nice but I can't actually do it", "value": 2},
+        {"label": "Exactly what I think", "value": 3}
+      ]
+    },
+    {
+      "id": "q12",
+      "dim": "E3",
+      "text": "I always instinctively want to take care of the people I love — even if it costs me a lot. Once I commit, I give it my all.",
+      "options": [
+        {"label": "I care for myself first", "value": 1},
+        {"label": "Within my ability", "value": 2},
+        {"label": "Yes — if it's for them, I'd give everything", "value": 3}
+      ]
+    },
+    {
+      "id": "q13",
+      "dim": "A1",
+      "text": "I love to think about and explore how people relate to each other. I can always sense the delicate dynamics hidden between people.",
+      "options": [
+        {"label": "I'm oblivious to that", "value": 1},
+        {"label": "Sometimes I notice", "value": 2},
+        {"label": "Spot on, my radar is always on", "value": 3}
+      ]
+    },
+    {
+      "id": "q14",
+      "dim": "A1",
+      "text": "I love observing and figuring out what people are really thinking.",
+      "options": [
+        {"label": "Just talk, don't think that hard", "value": 1},
+        {"label": "Only with close friends", "value": 2},
+        {"label": "Yes, I love analyzing others", "value": 3}
+      ]
+    },
+    {
+      "id": "q15",
+      "dim": "A2",
+      "text": "Which of these social postures do you naturally adopt?",
+      "options": [
+        {"label": "Sympathy — I always put myself in their shoes", "value": 1},
+        {"label": "Self-projection — I judge based on my own experience", "value": 2},
+        {"label": "Empathy — I sense what they actually feel", "value": 3}
+      ]
+    },
+    {
+      "id": "q16",
+      "dim": "A2",
+      "text": "When a friend comes to you upset and angry, what do you do?",
+      "options": [
+        {"label": "Let them vent, that's what they need", "value": 1},
+        {"label": "Give advice to calm them down", "value": 2},
+        {"label": "Help them analyze, then propose a counter-plan", "value": 3}
+      ]
+    },
+    {
+      "id": "q17",
+      "dim": "A3",
+      "text": "In a group setting, I tend to play the role of harmonizer.",
+      "options": [
+        {"label": "I'm usually the one causing trouble", "value": 1},
+        {"label": "Sometimes", "value": 2},
+        {"label": "Yes, I naturally defuse conflict", "value": 3}
+      ]
+    },
+    {
+      "id": "q18",
+      "dim": "A3",
+      "text": "If someone you care about makes a decision you strongly disagree with, what do you do?",
+      "options": [
+        {"label": "Push them hard to follow my advice", "value": 1},
+        {"label": "Voice it once, then respect their choice", "value": 2},
+        {"label": "Pretend I don't care; let them decide", "value": 3}
+      ]
+    },
+    {
+      "id": "q19",
+      "dim": "Ac1",
+      "text": "What would you do if you were alone at midnight in a dark alley and someone you didn't know followed you in?",
+      "options": [
+        {"label": "Run for your life", "value": 1},
+        {"label": "Stay calm, hide somewhere", "value": 2},
+        {"label": "Turn around and confront them head-on", "value": 3}
+      ]
+    },
+    {
+      "id": "q20",
+      "dim": "Ac1",
+      "text": "If you made 100,000 yuan today, your first thought would be...",
+      "options": [
+        {"label": "Save it up, plan ahead", "value": 1},
+        {"label": "Treat myself, I deserve it", "value": 2},
+        {"label": "Use it to do something bold", "value": 3}
+      ]
+    },
+    {
+      "id": "q21",
+      "dim": "Ac2",
+      "text": "If you were on a deserted island with no way out, what would you do?",
+      "options": [
+        {"label": "Wait for rescue patiently", "value": 1},
+        {"label": "Look for a way to escape actively", "value": 2},
+        {"label": "Build a new life there happily", "value": 3}
+      ]
+    },
+    {
+      "id": "q22",
+      "dim": "Ac2",
+      "text": "There's no question here. Please just pick a letter blindly.",
+      "options": [
+        {"label": "A", "value": 1},
+        {"label": "B", "value": 2},
+        {"label": "C", "value": 3}
+      ]
+    },
+    {
+      "id": "q23",
+      "dim": "Ac3",
+      "text": "If you were the leader of a country and a neighboring nation attacked you, what would you do?",
+      "options": [
+        {"label": "Negotiate peace, prioritize civilians", "value": 1},
+        {"label": "Organize defense, push back", "value": 2},
+        {"label": "Total war — I'll only stop when I'm on their soil", "value": 3}
+      ]
+    },
+    {
+      "id": "q24",
+      "dim": "Ac3",
+      "text": "If you were a multi-millionaire, your top priority would be...",
+      "options": [
+        {"label": "Living a quiet life, doing nothing", "value": 1},
+        {"label": "Investing and growing wealth", "value": 2},
+        {"label": "Going public, dominating the industry", "value": 3}
+      ]
+    },
+    {
+      "id": "q25",
+      "dim": "So1",
+      "text": "My friends all say I'm easy to get along with and I always accommodate them.",
+      "options": [
+        {"label": "I'm not like that", "value": 1},
+        {"label": "Sort of", "value": 2},
+        {"label": "Yes — I hate conflict", "value": 3}
+      ]
+    },
+    {
+      "id": "q26",
+      "dim": "So1",
+      "text": "In conflicts I tend to yield first.",
+      "options": [
+        {"label": "I don't yield", "value": 1},
+        {"label": "It depends on the situation", "value": 2},
+        {"label": "I usually compromise to keep peace", "value": 3}
+      ]
+    },
+    {
+      "id": "q27",
+      "dim": "So2",
+      "text": "When I think someone has hurt me, my reaction is...",
+      "options": [
+        {"label": "Forget it, life is short", "value": 1},
+        {"label": "Quietly cut ties, no drama", "value": 2},
+        {"label": "Strike back, eye for an eye", "value": 3}
+      ]
+    },
+    {
+      "id": "q28",
+      "dim": "So2",
+      "text": "In conflicts with friends, my principle is...",
+      "options": [
+        {"label": "Cut them off", "value": 1},
+        {"label": "Talk it out", "value": 2},
+        {"label": "Accept, even at my own cost", "value": 3}
+      ]
+    },
+    {
+      "id": "q29",
+      "dim": "So3",
+      "text": "If one of your friends clearly has wrong ideas and is about to make a bad call, what do you do?",
+      "options": [
+        {"label": "Ignore it — not my business", "value": 1},
+        {"label": "Casually mention my opinion", "value": 2},
+        {"label": "Stop them at all costs, even if they resent me", "value": 3}
+      ]
+    },
+    {
+      "id": "q30",
+      "dim": "So3",
+      "text": "If your partner does something you really disagree with, what do you do?",
+      "options": [
+        {"label": "Pretend I don't notice", "value": 1},
+        {"label": "Express it, but they decide", "value": 2},
+        {"label": "Force them to stop; if they insist, I exit", "value": 3}
+      ]
+    }
+  ],
+  "special": [
+    {
+      "id": "drink_gate_q1",
+      "text": "Today you are extremely happy and decide to have a big meal. Which of these would you choose?",
+      "options": [
+        {"label": "Hotpot", "value": 1},
+        {"label": "Barbecue", "value": 2},
+        {"label": "Drink till drunk", "value": 3},
+        {"label": "All of the above", "value": 4}
+      ]
+    },
+    {
+      "id": "drink_gate_q2",
+      "text": "After drinking, what state are you usually in?",
+      "options": [
+        {"label": "Talkative and energetic", "value": 1},
+        {"label": "Quiet and sleepy", "value": 2},
+        {"label": "Like a different person entirely", "value": 3},
+        {"label": "Pass out, no memory", "value": 4}
+      ]
+    }
+  ]
+}
