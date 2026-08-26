@@ -8,16 +8,11 @@ print("key prefix:", key[:12])
 
 # 火山方舟模型名探测
 models = [
-    "doubao-1-5-pro-32k-250115",
-    "doubao-pro-32k",
-    "doubao-lite-32k",
-    "ep-20240620",
-    "doubao-seed-1.6",
-    "doubao-1-5-pro-256k",
-    "doubao-1-5-lite-32k",
-    "doubao-seed-1.6-flash",
-    "doubao-1-5-thinking-pro",
-    "Doubao-1.5-pro-32k",
+    # 模型 ID（<产品版本>-<日期>格式）
+    "doubao-seed-2-0-mini-260428",   # Doubao-Seed-2.0-mini → mini
+    "doubao-seed-2-0-lite-260428",   # Doubao-Seed-2.0-lite → lite
+    "doubao-seed-2-1-pro-260628",    # Doubao-Seed-2.1-pro → pro
+    "doubao-1-5-pro-32k-250115",     # 旧 1.5
 ]
 url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
 for m in models:

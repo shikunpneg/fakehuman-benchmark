@@ -51,8 +51,15 @@ PROVIDERS = {
     },
     "ark": {  # 火山方舟（字节豆包），model 需填 endpoint ID
         "base_url": "https://ark.cn-beijing.volces.com/api/v3",
-        "models": ["doubao-1-5-pro-32k-250115"],
-        "api_key_env": "ARK_API_KEY",  # 也可用 DOUBAO_API_KEY（用户填的 ark 格式 key）
+        "models": [
+            # 模型 ID（按 4sapi / MCP 官方文档规范）：<产品版本>-<YYYYMMDD>
+            # Doubao-Seed-2.0-mini 产品线 → doubao-seed-2-0-mini-260428
+            "doubao-seed-2-0-mini-260428",
+            "doubao-seed-2-0-lite-260428",
+            "doubao-seed-2-1-pro-260628",
+            "doubao-1-5-pro-32k-250115",
+        ],
+        "api_key_env": ["ARK_API_KEY", "doubao_api_key"],  # 任一非空即用（.env 实际填 doubao_api_key）
     },
     "minimax": {
         "base_url": "https://api.minimax.chat/v1",
@@ -89,10 +96,12 @@ class ProviderError(RuntimeError):
 
 def _key_for(provider: str) -> str:
     env = PROVIDERS[provider]["api_key_env"]
-    key = os.environ.get(env)
-    if not key:
-        raise ProviderError(f"{provider}: 缺少环境变量 {env}（见 .env.example）")
-    return key
+    candidates = env if isinstance(env, (list, tuple)) else [env]
+    for name in candidates:
+        key = os.environ.get(name)
+        if key:
+            return key
+    raise ProviderError(f"{provider}: 缺少环境变量 {'/'.join(candidates)}（见 .env.example）")
 
 
 def load_env_smart() -> None:
