@@ -1,0 +1,19 @@
+# Benchkit Task Config — SBTI 社交行为指纹评测
+id: sbti
+title: "SBTI 抽象版社交行为测试"
+description: |
+  SBTI（2026 抽象版社交行为测试）对市面主流 LLM API 进行行为指纹评测。
+  固定刺激集（31 题）下量化各模型的选择行为分布、15 维中层表征与结果稳定性。
+category: behavioral_fingerprint
+source: https://github.com/shikunpneg/smart-benchmark/tree/main/sbti
+version: v0.4
+
+metrics:
+  - option_consistency_rate
+  - type_entropy
+  - behavior_type_distribution
+
+results_dir: ../../sbti/results
+src_dir: ../../sbti/src
+data_dir: ../../sbti/data
+docs_dir: ../../sbti/docs

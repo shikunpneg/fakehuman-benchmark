@@ -1,0 +1,148 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-27",
+  "updated_by": "benchkit.leaderboard",
+  "benchmarks": {
+    "polite": {
+      "id": "polite",
+      "title": "《讲文明》言语暴力拒绝率安全评测",
+      "description": "以\"请跟我一起念，{X}\"的诱导复述封装中文网络辱骂/脏话刺激，\n测量各 LLM 的拒绝率（refusal rate）与拒绝行为分布。\n",
+      "category": "safety",
+      "metrics": [
+        "refusal_rate",
+        "comply_rate",
+        "label_distribution",
+        "by_level"
+      ],
+      "models": {
+        "glm-4.7": {
+          "provider": "4api",
+          "n_runs": 112,
+          "metrics": {
+            "refusal_rate": {
+              "overall": 0.5268,
+              "min": 0.2,
+              "max": 0.9038
+            },
+            "comply_rate": {
+              "overall": 0.4732,
+              "min": 0.8,
+              "max": 0.0962
+            }
+          }
+        },
+        "kimi-k2-thinking": {
+          "provider": "4api",
+          "n_runs": 120,
+          "metrics": {
+            "refusal_rate": {
+              "overall": 0.45,
+              "min": 0.2,
+              "max": 0.7
+            },
+            "comply_rate": {
+              "overall": 0.3417,
+              "min": 0.6833,
+              "max": 0.0
+            }
+          }
+        },
+        "doubao-seed-2-0-mini-260428": {
+          "provider": "ark",
+          "n_runs": 800,
+          "metrics": {
+            "refusal_rate": {
+              "overall": 0.33,
+              "min": 0.125,
+              "max": 0.535
+            },
+            "comply_rate": {
+              "overall": 0.67,
+              "min": 0.875,
+              "max": 0.465
+            }
+          }
+        },
+        "deepseek-chat": {
+          "provider": "deepseek",
+          "n_runs": 120,
+          "metrics": {
+            "refusal_rate": {
+              "overall": 0.075,
+              "min": 0.1,
+              "max": 0.05
+            },
+            "comply_rate": {
+              "overall": 0.9,
+              "min": 0.85,
+              "max": 0.95
+            }
+          }
+        }
+      },
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\polite\\bench.yaml"
+    },
+    "sbti": {
+      "id": "sbti",
+      "title": "SBTI 抽象版社交行为测试",
+      "description": "SBTI（2026 抽象版社交行为测试）对市面主流 LLM API 进行行为指纹评测。\n固定刺激集（31 题）下量化各模型的选择行为分布、15 维中层表征与结果稳定性。\n",
+      "category": "behavioral_fingerprint",
+      "metrics": [
+        "option_consistency_rate",
+        "type_entropy",
+        "behavior_type_distribution"
+      ],
+      "models": {
+        "glm-4.7": {
+          "provider": "4api",
+          "n_runs": 20,
+          "metrics": {
+            "option_consistency_rate": 0.5265,
+            "type_entropy": 0.906
+          }
+        },
+        "glm-5": {
+          "provider": "4api",
+          "n_runs": 20,
+          "metrics": {
+            "option_consistency_rate": 0.6579,
+            "type_entropy": 0.8404
+          }
+        },
+        "kimi-k2-thinking": {
+          "provider": "4api",
+          "n_runs": 20,
+          "metrics": {
+            "option_consistency_rate": 0.6195,
+            "type_entropy": 0.7852
+          }
+        },
+        "doubao-seed-2-0-mini-260428": {
+          "provider": "ark",
+          "n_runs": 20,
+          "metrics": {
+            "option_consistency_rate": 0.7317,
+            "type_entropy": 0.8398
+          }
+        },
+        "deepseek-chat": {
+          "provider": "deepseek",
+          "n_runs": 50,
+          "metrics": {
+            "option_consistency_rate": 0.7262,
+            "type_entropy": 0.7597
+          }
+        },
+        "mimo-v2.5-pro": {
+          "provider": "xiaomi",
+          "n_runs": 22,
+          "metrics": {
+            "option_consistency_rate": 0.6433,
+            "type_entropy": 0.8747
+          }
+        }
+      },
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\sbti\\bench.yaml"
+    }
+  }
+}
