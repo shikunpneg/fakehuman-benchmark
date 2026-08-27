@@ -1,4 +1,4 @@
-# smart-benchmark
+# fakehuman-benchmark
 
 LLM API 行为基准集合仓库。每个子项目独立对外发布（独立的预注册、采集、可视化、报告）。
 
