@@ -10,3 +10,9 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# 结果产物（本地、不入库）
+results/
+benchkit_results/
+benches/*/results/
+*.jsonl

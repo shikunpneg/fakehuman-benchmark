@@ -1,0 +1,7 @@
+# benchkit 核心运行/估算/采集
+requests>=2.31
+python-dotenv>=1.0
+# 分析/可视化（与 sbti 一致）
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
