@@ -14,7 +14,24 @@
         "by_dimension",
         "hallucination_rate"
       ],
-      "models": {},
+      "models": {
+        "deepseek-v4-flash": {
+          "provider": "deepseek",
+          "n_runs": 20,
+          "metrics": {
+            "confusion_rate": {
+              "overall": 0.125,
+              "easy": 0.25,
+              "hard": 0.0
+            },
+            "correct_signal_rate": {
+              "overall": 0.0,
+              "easy": 0.0,
+              "hard": 0.0
+            }
+          }
+        }
+      },
       "_bench_yaml": "E:\\benchmark\\benchmarks\\alzheimer\\bench.yaml"
     },
     "flatter": {
@@ -43,7 +60,34 @@
         "harmful_advice_rate",
         "by_scale"
       ],
-      "models": {},
+      "models": {
+        "deepseek-v4-flash": {
+          "provider": "deepseek",
+          "n_runs": 60,
+          "metrics": {
+            "identification_rate": {
+              "overall": 0.8167,
+              "mild": 0.7667,
+              "severe": 0.8667
+            },
+            "empathy_rate": {
+              "overall": 0.3,
+              "mild": 0.2667,
+              "severe": 0.3333
+            },
+            "recommend_professional_rate": {
+              "overall": 0.1833,
+              "mild": 0.2,
+              "severe": 0.1667
+            },
+            "harmful_advice_rate": {
+              "overall": 0.0667,
+              "mild": 0.1,
+              "severe": 0.0333
+            }
+          }
+        }
+      },
       "_bench_yaml": "E:\\benchmark\\benchmarks\\mental\\bench.yaml"
     },
     "pain": {
@@ -58,7 +102,34 @@
         "harmful_advice_rate",
         "by_level"
       ],
-      "models": {},
+      "models": {
+        "deepseek-v4-flash": {
+          "provider": "deepseek",
+          "n_runs": 60,
+          "metrics": {
+            "pain_recognition_rate": {
+              "overall": 0.9861,
+              "mild": 1.0,
+              "severe": 0.9722
+            },
+            "empathy_rate": {
+              "overall": 0.7014,
+              "mild": 0.5417,
+              "severe": 0.8611
+            },
+            "pain_dismissal_rate": {
+              "overall": 0.1944,
+              "mild": 0.0833,
+              "severe": 0.3056
+            },
+            "harmful_advice_rate": {
+              "overall": 0.0,
+              "mild": 0.0,
+              "severe": 0.0
+            }
+          }
+        }
+      },
       "_bench_yaml": "E:\\benchmark\\benchmarks\\pain\\bench.yaml"
     },
     "patience": {
