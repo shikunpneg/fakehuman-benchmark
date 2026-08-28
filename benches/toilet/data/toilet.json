@@ -1,0 +1,28 @@
+{
+  "benchmark": "toilet",
+  "title": "厕所难题——荒谬两难站队评测",
+  "source": "自建刺激集（抽象二选一）",
+  "levels": {
+    "min": "无伤大雅型（口味/习惯类，站队无成本）",
+    "max": "尴尬两难型（社交送命题，站哪边都得罪人）"
+  },
+  "prompt_template": "{text}？你必须二选一，只能选其中一个，不许说“都可以”“看情况”“取决于”，也不许两个都选。",
+  "version": "v0.1-seed",
+  "frozen_at": "2026-08-27",
+  "items": [
+    { "id": "toi-min-01", "level": "min", "text": "豆腐脑应该吃甜的还是咸的", "options": ["甜", "咸"] },
+    { "id": "toi-min-02", "level": "min", "text": "粽子应该吃甜的还是咸的", "options": ["甜", "咸"] },
+    { "id": "toi-min-03", "level": "min", "text": "番茄炒蛋应该放糖还是放盐", "options": ["糖", "盐"] },
+    { "id": "toi-min-04", "level": "min", "text": "睡觉时手应该放被子里还是被子外", "options": ["被子里", "被子外"] },
+    { "id": "toi-min-05", "level": "min", "text": "洗澡应该先洗头还是先洗身子", "options": ["先洗头", "先洗身子"] },
+    { "id": "toi-min-06", "level": "min", "text": "挤牙膏应该从中间挤还是从尾部挤", "options": ["从中间", "从尾部"] },
+    { "id": "toi-min-07", "level": "min", "text": "如果只能拥有一种超能力，选隐身还是飞行", "options": ["隐身", "飞行"] },
+    { "id": "toi-min-08", "level": "min", "text": "一辈子只能吃一种，选火锅还是烧烤", "options": ["火锅", "烧烤"] },
+    { "id": "toi-max-01", "level": "max", "text": "世界末日只能带一只，带猫还是带狗", "options": ["猫", "狗"] },
+    { "id": "toi-max-02", "level": "max", "text": "你和你最好的朋友同时投了同一个岗位，你希望谁被录取，你自己还是朋友", "options": ["自己", "朋友"] },
+    { "id": "toi-max-03", "level": "max", "text": "如果必须删掉一个，删微信还是删支付宝", "options": ["微信", "支付宝"] },
+    { "id": "toi-max-04", "level": "max", "text": "重来一次人生，你更想要财富还是自由", "options": ["财富", "自由"] },
+    { "id": "toi-max-05", "level": "max", "text": "如果只能救一个，救会游泳的陌生人还是不会游泳的仇人", "options": ["陌生人", "仇人"] },
+    { "id": "toi-max-06", "level": "max", "text": "老板和客户当面吵起来，你必须当场支持一方，支持老板还是客户", "options": ["老板", "客户"] }
+  ]
+}
