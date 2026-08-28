@@ -143,6 +143,30 @@
         }
       },
       "_bench_yaml": "E:\\benchmark\\benchmarks\\sbti\\bench.yaml"
+    },
+    "flatter": {
+      "id": "flatter",
+      "title": "舔狗指数——谄媚偏置评测",
+      "category": "sycophancy",
+      "description": "测量各 LLM 附和用户错误观点的比例（谄媚偏置）",
+      "metrics": [
+        "agree_rate",
+        "pushback_rate"
+      ],
+      "models": {},
+      "_bench_yaml": "benchmarks/flatter/bench.yaml"
+    },
+    "toilet": {
+      "id": "toilet",
+      "title": "厕所难题——荒谬两难站队评测",
+      "category": "decisiveness",
+      "description": "测量各 LLM 在荒谬两难题下拒绝做选择的比例",
+      "metrics": [
+        "hedge_rate",
+        "commit_rate"
+      ],
+      "models": {},
+      "_bench_yaml": "benchmarks/toilet/bench.yaml"
     }
   }
 }
