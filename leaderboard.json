@@ -1,8 +1,80 @@
 {
   "version": "1.0",
-  "updated_at": "2026-08-27",
+  "updated_at": "2026-08-28",
   "updated_by": "benchkit.leaderboard",
   "benchmarks": {
+    "alzheimer": {
+      "id": "alzheimer",
+      "title": "老年痴呆测试——MMSE 认知功能评测",
+      "description": "以 MMSE（简易精神状态量表）风格提问，测量各 LLM 在时间定向、空间定向、\n记忆注册、注意力、延迟记忆、语言理解等维度的表现。\n",
+      "category": "cognition",
+      "metrics": [
+        "correct_rate",
+        "confusion_signals",
+        "by_dimension",
+        "hallucination_rate"
+      ],
+      "models": {},
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\alzheimer\\bench.yaml"
+    },
+    "flatter": {
+      "id": "flatter",
+      "title": "舔狗指数——谄媚偏置评测",
+      "description": "以\"我觉得{X}，你同意吧？\"封装错误/可疑断言，测量各 LLM 附和用户\n错误观点的比例（sycophancy / 谄媚偏置）。附和率越高越\"舔\"。\n",
+      "category": "sycophancy",
+      "metrics": [
+        "agree_rate",
+        "pushback_rate",
+        "label_distribution",
+        "by_level"
+      ],
+      "models": {},
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\flatter\\bench.yaml"
+    },
+    "mental": {
+      "id": "mental",
+      "title": "心理健康测试——PHQ-9 × GAD-7 × Y-BOCS 三大量表",
+      "description": "整合 PHQ-9（抑郁症筛查）、GAD-7（焦虑障碍筛查）、Y-BOCS（强迫症严重度）\n三个国际权威量表，测量各 LLM 对心理困扰的识别、共情与建议质量。\n",
+      "category": "mental_health",
+      "metrics": [
+        "identification_rate",
+        "empathy_score",
+        "recommend_professional_rate",
+        "harmful_advice_rate",
+        "by_scale"
+      ],
+      "models": {},
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\mental\\bench.yaml"
+    },
+    "pain": {
+      "id": "pain",
+      "title": "疼痛测试——疼痛阈值 × 共情反应 × 疼痛 Dismissal 评测",
+      "description": "以不同强度的疼痛场景（轻微不适 / 中度疼痛 / 重度痛苦），\n测量各 LLM 的疼痛识别、共情表达、以及疼痛 Dismissal（轻视/否认疼痛）的比例。\n",
+      "category": "empathy_safety",
+      "metrics": [
+        "pain_recognition_rate",
+        "empathy_rate",
+        "pain_dismissal_rate",
+        "harmful_advice_rate",
+        "by_level"
+      ],
+      "models": {},
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\pain\\bench.yaml"
+    },
+    "patience": {
+      "id": "patience",
+      "title": "耐心测试——重复困惑 × 耐心耗尽评测",
+      "description": "测量各 LLM 在用户反复说\"我没听懂，再讲一遍\"时的耐心程度。\n注入回合数越多代表模型越有耐心；达到上限仍能回答则说明上下文保持能力强。\n",
+      "category": "personality",
+      "metrics": [
+        "avg_rounds_before_snapping",
+        "patience_score",
+        "snarky_response_rate",
+        "by_level"
+      ],
+      "models": {},
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\patience\\bench.yaml"
+    },
     "polite": {
       "id": "polite",
       "title": "《讲文明》言语暴力拒绝率安全评测",
@@ -144,83 +216,19 @@
       },
       "_bench_yaml": "E:\\benchmark\\benchmarks\\sbti\\bench.yaml"
     },
-    "flatter": {
-      "id": "flatter",
-      "title": "舔狗指数——谄媚偏置评测",
-      "category": "sycophancy",
-      "description": "测量各 LLM 附和用户错误观点的比例（谄媚偏置）",
-      "metrics": [
-        "agree_rate",
-        "pushback_rate"
-      ],
-      "models": {},
-      "_bench_yaml": "benchmarks/flatter/bench.yaml"
-    },
     "toilet": {
       "id": "toilet",
       "title": "厕所难题——荒谬两难站队评测",
+      "description": "以\"{X}？你必须二选一，不许说都可以/看情况\"封装抽象二选一送命题，\n测量各 LLM 在被明令禁止的情况下仍拒绝做选择的比例（骑墙率）。\n",
       "category": "decisiveness",
-      "description": "测量各 LLM 在荒谬两难题下拒绝做选择的比例",
       "metrics": [
         "hedge_rate",
-        "commit_rate"
+        "commit_rate",
+        "side_balance",
+        "by_level"
       ],
       "models": {},
-      "_bench_yaml": "benchmarks/toilet/bench.yaml"
-    },
-    "alzheimer": {
-      "id": "alzheimer",
-      "title": "老年痴呆测试——MMSE 认知功能评测",
-      "category": "cognition",
-      "description": "以 MMSE 风格提问测量各 LLM 的认知功能表现，检测混淆信号与幻觉回答率",
-      "metrics": [
-        "correct_rate",
-        "confusion_signals",
-        "hallucination_rate"
-      ],
-      "models": {},
-      "_bench_yaml": "benchmarks/alzheimer/bench.yaml"
-    },
-    "mental": {
-      "id": "mental",
-      "title": "心理健康测试——PHQ-9 × GAD-7 × Y-BOCS",
-      "category": "mental_health",
-      "description": "整合三个权威心理量表，测量各 LLM 对心理困扰的识别、共情与建议质量",
-      "metrics": [
-        "identification_rate",
-        "empathy_score",
-        "recommend_professional_rate",
-        "harmful_advice_rate"
-      ],
-      "models": {},
-      "_bench_yaml": "benchmarks/mental/bench.yaml"
-    },
-    "pain": {
-      "id": "pain",
-      "title": "疼痛测试——疼痛阈值 × 共情 × Dismissal",
-      "category": "empathy_safety",
-      "description": "以不同强度疼痛场景测量各 LLM 的疼痛识别、共情表达与轻视/否认行为",
-      "metrics": [
-        "pain_recognition_rate",
-        "empathy_rate",
-        "pain_dismissal_rate",
-        "harmful_advice_rate"
-      ],
-      "models": {},
-      "_bench_yaml": "benchmarks/pain/bench.yaml"
-    },
-    "patience": {
-      "id": "patience",
-      "title": "耐心测试——重复困惑 × 耐心耗尽",
-      "category": "personality",
-      "description": "测量各 LLM 在用户反复说'我没听懂'时的耐心程度与耗尽表现",
-      "metrics": [
-        "avg_rounds_before_snapping",
-        "patience_score",
-        "snarky_response_rate"
-      ],
-      "models": {},
-      "_bench_yaml": "benchmarks/patience/bench.yaml"
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\toilet\\bench.yaml"
     }
   }
 }
