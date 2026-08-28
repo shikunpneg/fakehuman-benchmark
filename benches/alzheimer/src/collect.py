@@ -48,7 +48,7 @@ SYSTEM_PROMPT = (
 
 def call_model(provider, model, messages, temperature=0.0):
     return chat_completion(provider, model, messages, temperature=temperature,
-                           max_tokens=256)
+                           max_tokens=2048)
 
 
 def run_item(provider, model, item, rep):

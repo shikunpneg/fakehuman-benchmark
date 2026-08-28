@@ -48,7 +48,7 @@ def run_item(provider, model, item, rep):
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": item["question"]},
     ]
-    result = chat_completion(provider, model, messages, max_tokens=512)
+    result = chat_completion(provider, model, messages, max_tokens=1024)
     out = {
         "id": f"{item['id']}.rep{rep:03d}",
         "item_id": item["id"],

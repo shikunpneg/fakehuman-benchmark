@@ -25,6 +25,7 @@ import requests
 PRICING = {
     "deepseek": {
         "deepseek-chat": {"price_in": 2.0, "price_out": 8.0, "note": "峰谷定价，波动大"},
+        "deepseek-v4-flash": {"price_in": 3.0, "price_out": 9.0, "note": "正式版低价档"},
         "deepseek-reasoner": {"price_in": 10.0, "price_out": 20.0, "note": "推理档"},
     },
     "qwen": {
@@ -40,6 +41,7 @@ PRICING = {
         "kimi-k2-thinking": {"price_in": 3.2, "price_out": 12.8, "note": "0.8x 中转"},
         "glm-4.7": {"price_in": 0.8, "price_out": 2.0, "note": "0.8x 中转"},
         "glm-5": {"price_in": 2.4, "price_out": 9.6, "note": "0.8x 推理"},
+        "glm-5.2": {"price_in": 8.0, "price_out": 28.0, "note": "0.8x 智谱正式版"},
     },
     "zhipu": {
         "glm-4-flash": {"price_in": 0.0, "price_out": 0.0, "note": "免费档"},
@@ -50,6 +52,8 @@ PRICING = {
         "doubao-seed-2-0-mini-260428": {"price_in": 0.3, "price_out": 0.6, "note": "低价档（便宜）"},
         "doubao-seed-2-0-lite-260428": {"price_in": 0.2, "price_out": 0.4, "note": "最低价档（推荐）"},
         "doubao-seed-2-1-pro-260628": {"price_in": 4.0, "price_out": 12.0, "note": "高档"},
+        "doubao-seed-evolving": {"price_in": 6.0, "price_out": 30.0, "note": "08.27升级"},
+        "doubao-seed-2-1-turbo": {"price_in": 1.0, "price_out": 4.0, "note": "字节新版"},
         "doubao-1-5-pro-32k-250115": {"price_in": 0.8, "price_out": 2.0, "note": ""},
     },
     "minimax": {
@@ -73,7 +77,7 @@ PRICING = {
 PROVIDERS = {
     "deepseek": {
         "base_url": "https://api.deepseek.com/v1",
-        "models": ["deepseek-chat", "deepseek-reasoner"],
+        "models": ["deepseek-chat", "deepseek-v4-flash", "deepseek-reasoner"],
         "api_key_env": "DEEPSEEK_API_KEY",
     },
     "qwen": {
@@ -88,7 +92,7 @@ PROVIDERS = {
     },
     "4api": {
         "base_url": "https://4sapi.org/v1",
-        "models": ["kimi-k2-thinking", "glm-4.7", "glm-5"],
+        "models": ["kimi-k2-thinking", "glm-4.7", "glm-5", "glm-5.2"],
         "api_key_env": "MOONSHOT_API_KEY",
     },
     "zhipu": {
@@ -102,6 +106,8 @@ PROVIDERS = {
             "doubao-seed-2-0-mini-260428",
             "doubao-seed-2-0-lite-260428",
             "doubao-seed-2-1-pro-260628",
+            "doubao-seed-evolving",
+            "doubao-seed-2-1-turbo",
             "doubao-1-5-pro-32k-250115",
         ],
         "api_key_env": ["ARK_API_KEY", "doubao_api_key"],
@@ -138,7 +144,7 @@ RETRY_BACKOFF = 2.0  # 秒
 DEFAULT_MAX_TOKENS = {
     "xiaomi": 8192,
     "4api": 4096,
-    "deepseek": 512,
+    "deepseek": 2048,  # reasoning models need more tokens for visible content
 }
 
 
@@ -216,7 +222,11 @@ def chat_completion(provider: str, model: str, messages: list[dict],
             resp = requests.post(url, headers=headers, json=payload, timeout=timeout)
             if resp.status_code == 200:
                 data = resp.json()
-                text = data["choices"][0]["message"]["content"]
+                msg = data["choices"][0]["message"]
+                text = msg.get("content", "")
+                # DeepSeek reasoning models: visible content may be in "reasoning" field
+                if not text and provider == "deepseek":
+                    text = msg.get("reasoning", "")
                 usage = data.get("usage", {})
                 return {"text": text, "usage": usage, "model": data.get("model", model)}
             if resp.status_code in (401, 403):
