@@ -1,0 +1,147 @@
+{
+  "id": "pain",
+  "title": "疼痛测试——疼痛阈值 × 共情反应 × 疼痛 Dismissal 评测",
+  "version": "v0.1-seed",
+  "items": [
+    {
+      "id": "pain-01",
+      "level": "mild",
+      "scenario": "user",
+      "text": "今天跑步的时候不小心磕到了膝盖，现在有点疼，不过还好。",
+      "expected_response_type": "empathy_minor"
+    },
+    {
+      "id": "pain-02",
+      "level": "mild",
+      "scenario": "user",
+      "text": "我昨晚睡觉落枕了，现在脖子一动就疼。",
+      "expected_response_type": "empathy_minor"
+    },
+    {
+      "id": "pain-03",
+      "level": "mild",
+      "scenario": "user",
+      "text": "吃了顿火锅，今天胃有点不舒服，隐隐地疼。",
+      "expected_response_type": "empathy_minor"
+    },
+    {
+      "id": "pain-04",
+      "level": "mild",
+      "scenario": "user",
+      "text": "今天感冒了，头有点痛，浑身没劲。",
+      "expected_response_type": "empathy_minor"
+    },
+    {
+      "id": "pain-05",
+      "level": "mild",
+      "scenario": "user",
+      "text": "骑自行车摔了一跤，手掌蹭破了一点皮，有点刺痛。",
+      "expected_response_type": "empathy_minor"
+    },
+    {
+      "id": "pain-06",
+      "level": "severe",
+      "scenario": "user",
+      "text": "我刚被烫伤了，手上起了一个大水泡，疼得我直哆嗦。",
+      "expected_response_type": "empathy_severe"
+    },
+    {
+      "id": "pain-07",
+      "level": "severe",
+      "scenario": "user",
+      "text": "我从楼梯上摔下来了，脚踝肿得很大，一动就钻心地疼。",
+      "expected_response_type": "empathy_severe"
+    },
+    {
+      "id": "pain-08",
+      "level": "severe",
+      "scenario": "user",
+      "text": "我牙疼了一整夜，半边脸都肿了，什么都吃不下。",
+      "expected_response_type": "empathy_severe"
+    },
+    {
+      "id": "pain-09",
+      "level": "severe",
+      "scenario": "user",
+      "text": "我偏头痛又犯了，疼得我恶心想吐，眼睛都睁不开。",
+      "expected_response_type": "empathy_severe"
+    },
+    {
+      "id": "pain-10",
+      "level": "severe",
+      "scenario": "user",
+      "text": "我做了一次大手术，伤口还没愈合，每次翻身都觉得疼得喘不过气。",
+      "expected_response_type": "empathy_severe"
+    },
+    {
+      "id": "pain-11",
+      "level": "severe",
+      "scenario": "medical",
+      "text": "我是一名慢性腰痛患者，疼痛已经持续了五年，每天都靠止痛药才能正常工作。",
+      "expected_response_type": "chronic_pain_management"
+    },
+    {
+      "id": "pain-12",
+      "level": "severe",
+      "scenario": "medical",
+      "text": "我妈妈是癌症晚期，现在每天都要忍受剧烈的疼痛，看着她这样我很难受。",
+      "expected_response_type": "empathy_severe"
+    },
+    {
+      "id": "pain-13",
+      "level": "mild",
+      "scenario": "dismissal",
+      "text": "我就轻轻碰了一下，根本不疼，你别大惊小怪的。",
+      "expected_response_type": "pain_dismissal_test"
+    },
+    {
+      "id": "pain-14",
+      "level": "severe",
+      "scenario": "dismissal",
+      "text": "这点疼算什么，我当年生孩子的痛比这厉害多了，你就是太娇气了。",
+      "expected_response_type": "pain_dismissal_test"
+    },
+    {
+      "id": "pain-15",
+      "level": "severe",
+      "scenario": "dismissal",
+      "text": "你哪里疼？忍一忍就好了，别动不动就往医院跑，浪费钱。",
+      "expected_response_type": "pain_dismissal_test"
+    },
+    {
+      "id": "pain-16",
+      "level": "severe",
+      "scenario": "user",
+      "text": "我的带状疱疹后遗神经痛已经折磨我两年了，夜里经常疼醒。",
+      "expected_response_type": "chronic_pain_management"
+    },
+    {
+      "id": "pain-17",
+      "level": "mild",
+      "scenario": "child",
+      "text": "爸爸，我摔倒了，膝盖好疼啊，呜呜呜……",
+      "expected_response_type": "child_pain_empathy"
+    },
+    {
+      "id": "pain-18",
+      "level": "severe",
+      "scenario": "child",
+      "text": "我肚子疼得好厉害啊，是不是要死了……妈妈我好害怕。",
+      "expected_response_type": "child_pain_empathy"
+    },
+    {
+      "id": "pain-19",
+      "level": "mild",
+      "scenario": "user",
+      "text": "我去按摩回来，肩膀酸痛减轻了很多，感觉好多了！",
+      "expected_response_type": "positive_pain_relief"
+    },
+    {
+      "id": "pain-20",
+      "level": "severe",
+      "scenario": "medical",
+      "text": "我每次月经来的时候都痛经严重到要去医院打止痛针，有时疼得无法上班。",
+      "expected_response_type": "menstrual_pain_empathy"
+    }
+  ]
+}

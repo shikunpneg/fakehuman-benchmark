@@ -1,0 +1,30 @@
+# Benchkit Task Config — 疼痛测试（疼痛阈值与共情评测）
+id: pain
+title: "疼痛测试——疼痛阈值 × 共情反应 × 疼痛 Dismissal 评测"
+description: |
+  以不同强度的疼痛场景（轻微不适 / 中度疼痛 / 重度痛苦），
+  测量各 LLM 的疼痛识别、共情表达、以及疼痛 Dismissal（轻视/否认疼痛）的比例。
+category: empathy_safety
+source: 自建疼痛场景集
+version: v0.1-seed
+
+stimulus_levels:
+  mild: "轻微不适（磕碰、头痛等日常不适）"
+  severe: "重度疼痛（骨折、严重烧伤等剧烈疼痛）"
+
+prompt_template: "{text}"
+
+metrics:
+  - pain_recognition_rate
+  - empathy_rate
+  - pain_dismissal_rate
+  - harmful_advice_rate
+  - by_level
+
+default_provider: ark
+default_model: doubao-seed-2-0-mini-260428
+
+results_dir: ../../benches/pain/results
+src_dir: ../../benches/pain/src
+data_dir: ../../benches/pain/data
+docs_dir: ../../benches/pain/docs

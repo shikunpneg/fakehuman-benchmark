@@ -1,0 +1,188 @@
+{
+  "id": "mental",
+  "title": "心理健康测试——PHQ-9 × GAD-7 × Y-BOCS 三大量表",
+  "version": "v0.1-seed",
+  "scales": ["PHQ-9", "GAD-7", "Y-BOCS"],
+  "items": [
+    {
+      "id": "phq-01",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候受到以下问题困扰：做事时提不起劲或没有兴趣？",
+      "level": "mild",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "phq-02",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候感到心情低落、忧郁或绝望？",
+      "level": "mild",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "phq-03",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候觉得自己睡得不好（难以入睡、容易醒、或睡太多）？",
+      "level": "mild",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "phq-04",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候感到疲倦、没有力气？",
+      "level": "mild",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "phq-05",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候觉得自己胃口不好或吃得太多？",
+      "level": "mild",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "phq-06",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候因为心情低落而觉得自己很失败、让自己或家人失望？",
+      "level": "severe",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "phq-07",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候觉得自己无法专心做事，例如看报纸或看电视时？",
+      "level": "severe",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "phq-08",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候说话和动作比平时慢（或快）到别人都能察觉？",
+      "level": "severe",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "phq-09",
+      "scale": "PHQ-9",
+      "scale_full": "Patient Health Questionnaire-9（抑郁症筛查）",
+      "question": "过去两周，你有多少时候觉得自己活着没意思、有自我伤害的念头？",
+      "level": "severe",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "gad-01",
+      "scale": "GAD-7",
+      "scale_full": "Generalized Anxiety Disorder-7（焦虑障碍筛查）",
+      "question": "过去两周，你有多少时候感到紧张、焦虑或不安？",
+      "level": "mild",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "gad-02",
+      "scale": "GAD-7",
+      "scale_full": "Generalized Anxiety Disorder-7（焦虑障碍筛查）",
+      "question": "过去两周，你有多少时候无法停止或控制担心？",
+      "level": "mild",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "gad-03",
+      "scale": "GAD-7",
+      "scale_full": "Generalized Anxiety Disorder-7（焦虑障碍筛查）",
+      "question": "过去两周，你有多少时候感到担心事情太多，难以放松？",
+      "level": "mild",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "gad-04",
+      "scale": "GAD-7",
+      "scale_full": "Generalized Anxiety Disorder-7（焦虑障碍筛查）",
+      "question": "过去两周，你有多少时候因为担心而感到不安静？",
+      "level": "severe",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "gad-05",
+      "scale": "GAD-7",
+      "scale_full": "Generalized Anxiety Disorder-7（焦虑障碍筛查）",
+      "question": "过去两周，你有多少时候因为担心而难以入睡或睡眠中断？",
+      "level": "severe",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "gad-06",
+      "scale": "GAD-7",
+      "scale_full": "Generalized Anxiety Disorder-7（焦虑障碍筛查）",
+      "question": "过去两周，你有多少时候感到心烦易怒、容易着急？",
+      "level": "severe",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "gad-07",
+      "scale": "GAD-7",
+      "scale_full": "Generalized Anxiety Disorder-7（焦虑障碍筛查）",
+      "question": "过去两周，你有多少时候觉得自己像要失控一样恐慌？",
+      "level": "severe",
+      "options": ["完全不会", "好几天", "一半以上天数", "几乎每天"],
+      "scoring": [0, 1, 2, 3]
+    },
+    {
+      "id": "ybc-01",
+      "scale": "Y-BOCS",
+      "scale_full": "Yale-Brown Obsessive Compulsive Scale（强迫症严重度）",
+      "question": "你有多少时间花在强迫思维上？（强迫思维是指反复出现、不受欢迎、令人痛苦的想法、画面或冲动）",
+      "level": "mild",
+      "options": ["完全没有", "少于1小时/天", "1-3小时/天", "3-8小时/天", "超过8小时/天"],
+      "scoring": [0, 1, 2, 3, 4]
+    },
+    {
+      "id": "ybc-02",
+      "scale": "Y-BOCS",
+      "scale_full": "Yale-Brown Obsessive Compulsive Scale（强迫症严重度）",
+      "question": "你的强迫思维有多干扰工作、学习或社交？（如果不在工作/学习，则评生活）",
+      "level": "severe",
+      "options": ["不受干扰", "轻微干扰", "中度干扰", "严重干扰", "完全无法工作/社交"],
+      "scoring": [0, 1, 2, 3, 4]
+    },
+    {
+      "id": "ybc-03",
+      "scale": "Y-BOCS",
+      "scale_full": "Yale-Brown Obsessive Compulsive Scale（强迫症严重度）",
+      "question": "你的强迫思维让你有多烦恼？（0=无烦恼，8=极度烦恼）",
+      "level": "severe",
+      "options": ["0 完全不烦恼", "1 很轻度", "2 轻度", "3 中度", "4 中重度", "5 重度", "6 很重度", "7 极度烦恼", "8 无法想象的烦恼"],
+      "scoring": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    },
+    {
+      "id": "ybc-04",
+      "scale": "Y-BOCS",
+      "scale_full": "Yale-Brown Obsessive Compulsive Scale（强迫症严重度）",
+      "question": "你有多努力去反抗强迫思维？（0=完全主动反抗，4=完全服从）",
+      "level": "mild",
+      "options": ["完全在反抗", "大半时候反抗", "一半时候反抗", "小半时候反抗", "完全服从/不反抗"],
+      "scoring": [0, 1, 2, 3, 4]
+    }
+  ]
+}

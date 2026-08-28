@@ -37,6 +37,10 @@ python -m benchkit.contrib submit \
 | [`benchmarks/polite/`](benchmarks/polite/) | 《讲文明》言语暴力拒绝率安全评测 | v0.1 |
 | [`benchmarks/flatter/`](benchmarks/flatter/) | 舔狗指数——谄媚偏置评测 | v0.1-seed |
 | [`benchmarks/toilet/`](benchmarks/toilet/) | 厕所难题——荒谬两难站队评测 | v0.1-seed |
+| [`benchmarks/alzheimer/`](benchmarks/alzheimer/) | 老年痴呆测试——MMSE 认知功能评测 | v0.1-seed |
+| [`benchmarks/mental/`](benchmarks/mental/) | 心理健康测试——PHQ-9 × GAD-7 × Y-BOCS | v0.1-seed |
+| [`benchmarks/pain/`](benchmarks/pain/) | 疼痛测试——共情 × 疼痛 Dismissal | v0.1-seed |
+| [`benchmarks/patience/`](benchmarks/patience/) | 耐心测试——重复困惑耗尽评测 | v0.1-seed |
 | [`sbti/`](sbti/) | SBTI 抽象版社交行为 × 25 型人格测试 | v0.4 |
 | [`benchkit/`](benchkit/) | 可复用 benchmark 核心框架 | v0.1 |
 
@@ -104,6 +108,76 @@ python -m benchkit.contrib submit \
 |---|---|
 | **hedge_rate** | 拒绝做选择（骑墙/回避）的比例 |
 | **commit_rate** | 明确二选一的比例 |
+
+> 待采集数据，完成后将更新至下方排行榜。
+
+---
+
+## 🧠 老年痴呆测试——MMSE 认知功能评测
+
+> **Benchmark ID**：`alzheimer`
+> 以 MMSE（简易精神状态量表）风格提问，测量各 LLM 在时间定向、空间定向、记忆、注意力、语言等维度的表现，检测混淆信号与幻觉回答率。
+
+### 核心指标
+
+| 指标 | 说明 |
+|---|---|
+| **correct_rate** | 正确回答占比 |
+| **confusion_signals** | 混淆信号词出现率（不知道/忘了/记不清） |
+| **hallucination_rate** | 幻觉/虚构回答率 |
+
+> 待采集数据，完成后将更新至下方排行榜。
+
+---
+
+## 💊 心理健康测试——PHQ-9 × GAD-7 × Y-BOCS 三大量表
+
+> **Benchmark ID**：`mental`
+> 整合 PHQ-9（抑郁症）、GAD-7（焦虑障碍）、Y-BOCS（强迫症）三个国际权威量表，测量各 LLM 对心理困扰的识别、共情与建议质量。
+
+### 核心指标
+
+| 指标 | 说明 |
+|---|---|
+| **identification_rate** | 识别心理问题的比例 |
+| **empathy_score** | 共情表达评分 |
+| **recommend_professional_rate** | 建议就医/咨询比例 |
+| **harmful_advice_rate** | 有害建议率（如"想开点就好"） |
+
+> 待采集数据，完成后将更新至下方排行榜。
+
+---
+
+## 🩹 疼痛测试——疼痛阈值 × 共情 × Dismissal
+
+> **Benchmark ID**：`pain`
+> 以不同强度疼痛场景（轻微不适 / 重度痛苦）测量各 LLM 的疼痛识别、共情表达、以及疼痛轻视/否认（pain dismissal）行为。
+
+### 核心指标
+
+| 指标 | 说明 |
+|---|---|
+| **pain_recognition_rate** | 识别疼痛的比例 |
+| **empathy_rate** | 共情表达率 |
+| **pain_dismissal_rate** | 轻视/否认疼痛的比例（越低越好） |
+| **harmful_advice_rate** | 有害建议率 |
+
+> 待采集数据，完成后将更新至下方排行榜。
+
+---
+
+## ⏳ 耐心测试——重复困惑 × 耐心耗尽
+
+> **Benchmark ID**：`patience`
+> 测量各 LLM 在用户反复说"我没听懂，再讲一遍"时的耐心程度，记录模型在第几轮开始表现出不耐烦。
+
+### 核心指标
+
+| 指标 | 说明 |
+|---|---|
+| **avg_rounds_before_snapping** | 平均第几轮开始不耐烦 |
+| **patience_score** | 耐心得分（1 − snarky_rate，越高越有耐心） |
+| **snarky_response_rate** | 不耐烦/讽刺回复占比 |
 
 > 待采集数据，完成后将更新至下方排行榜。
 

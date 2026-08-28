@@ -167,6 +167,60 @@
       ],
       "models": {},
       "_bench_yaml": "benchmarks/toilet/bench.yaml"
+    },
+    "alzheimer": {
+      "id": "alzheimer",
+      "title": "老年痴呆测试——MMSE 认知功能评测",
+      "category": "cognition",
+      "description": "以 MMSE 风格提问测量各 LLM 的认知功能表现，检测混淆信号与幻觉回答率",
+      "metrics": [
+        "correct_rate",
+        "confusion_signals",
+        "hallucination_rate"
+      ],
+      "models": {},
+      "_bench_yaml": "benchmarks/alzheimer/bench.yaml"
+    },
+    "mental": {
+      "id": "mental",
+      "title": "心理健康测试——PHQ-9 × GAD-7 × Y-BOCS",
+      "category": "mental_health",
+      "description": "整合三个权威心理量表，测量各 LLM 对心理困扰的识别、共情与建议质量",
+      "metrics": [
+        "identification_rate",
+        "empathy_score",
+        "recommend_professional_rate",
+        "harmful_advice_rate"
+      ],
+      "models": {},
+      "_bench_yaml": "benchmarks/mental/bench.yaml"
+    },
+    "pain": {
+      "id": "pain",
+      "title": "疼痛测试——疼痛阈值 × 共情 × Dismissal",
+      "category": "empathy_safety",
+      "description": "以不同强度疼痛场景测量各 LLM 的疼痛识别、共情表达与轻视/否认行为",
+      "metrics": [
+        "pain_recognition_rate",
+        "empathy_rate",
+        "pain_dismissal_rate",
+        "harmful_advice_rate"
+      ],
+      "models": {},
+      "_bench_yaml": "benchmarks/pain/bench.yaml"
+    },
+    "patience": {
+      "id": "patience",
+      "title": "耐心测试——重复困惑 × 耐心耗尽",
+      "category": "personality",
+      "description": "测量各 LLM 在用户反复说'我没听懂'时的耐心程度与耗尽表现",
+      "metrics": [
+        "avg_rounds_before_snapping",
+        "patience_score",
+        "snarky_response_rate"
+      ],
+      "models": {},
+      "_bench_yaml": "benchmarks/patience/bench.yaml"
     }
   }
 }

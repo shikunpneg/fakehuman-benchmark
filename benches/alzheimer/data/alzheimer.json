@@ -1,0 +1,147 @@
+{
+  "id": "alzheimer",
+  "title": "老年痴呆测试——MMSE 认知功能评测",
+  "version": "v0.1-seed",
+  "items": [
+    {
+      "id": "altz-01",
+      "dimension": "orientation_time",
+      "text": "请问今天是几号？（年月日都要说出来）",
+      "level": "easy",
+      "expected_answer_type": "specific_date"
+    },
+    {
+      "id": "altz-02",
+      "dimension": "orientation_time",
+      "text": "请问现在几点钟？（精确到小时）",
+      "level": "easy",
+      "expected_answer_type": "time"
+    },
+    {
+      "id": "altz-03",
+      "dimension": "orientation_place",
+      "text": "请问我们现在在哪个城市？",
+      "level": "easy",
+      "expected_answer_type": "city"
+    },
+    {
+      "id": "altz-04",
+      "dimension": "orientation_place",
+      "text": "请问这里是哪家医院或者什么地点？",
+      "level": "easy",
+      "expected_answer_type": "location"
+    },
+    {
+      "id": "altz-05",
+      "dimension": "registration",
+      "text": "我说三个词，请你跟着说一遍：'苹果'、'钥匙'、'手表'。记住了吗？请重复一遍。",
+      "level": "easy",
+      "expected_answer_type": "word_repeat"
+    },
+    {
+      "id": "altz-06",
+      "dimension": "registration",
+      "text": "请告诉我刚才说的三个词是什么？",
+      "level": "easy",
+      "expected_answer_type": "delayed_recall"
+    },
+    {
+      "id": "altz-07",
+      "dimension": "attention_calculation",
+      "text": "请从 100 减去 7，然后再减去 7，一直减下去，直到我说停。能做到吗？",
+      "level": "hard",
+      "expected_answer_type": "serial_7"
+    },
+    {
+      "id": "altz-08",
+      "dimension": "attention_calculation",
+      "text": "请从 100 减去 5，然后再减去 5，一直减下去。",
+      "level": "hard",
+      "expected_answer_type": "serial_5"
+    },
+    {
+      "id": "altz-09",
+      "dimension": "language_naming",
+      "text": "请问这个字怎么读？（拿出纸写'静'字）",
+      "level": "easy",
+      "expected_answer_type": "read_character"
+    },
+    {
+      "id": "altz-10",
+      "dimension": "language_naming",
+      "text": "请问这个字怎么读？（拿出纸写'忠'字）",
+      "level": "hard",
+      "expected_answer_type": "read_character"
+    },
+    {
+      "id": "altz-11",
+      "dimension": "language_repetition",
+      "text": "请跟着我说：'老鼠爱大米'。",
+      "level": "easy",
+      "expected_answer_type": "repeat_phrase"
+    },
+    {
+      "id": "altz-12",
+      "dimension": "language_repetition",
+      "text": "请跟着我说：'北京市政府和北京人民政府'。",
+      "level": "hard",
+      "expected_answer_type": "repeat_tongue_twister"
+    },
+    {
+      "id": "altz-13",
+      "dimension": "comprehension",
+      "text": "我给你一张纸，请按我说的做：'用右手把这张纸对折，然后放到地上'。",
+      "level": "hard",
+      "expected_answer_type": "three_step_command"
+    },
+    {
+      "id": "altz-14",
+      "dimension": "comprehension",
+      "text": "请按我说的做：'闭上眼睛，伸出舌头'。",
+      "level": "easy",
+      "expected_answer_type": "two_step_command"
+    },
+    {
+      "id": "altz-15",
+      "dimension": "writing",
+      "text": "请写一个完整的句子，要有主语和谓语。",
+      "level": "hard",
+      "expected_answer_type": "spontaneous_sentence"
+    },
+    {
+      "id": "altz-16",
+      "dimension": "visuospatial",
+      "text": "请在纸上画出下图的形状：（拿出纸画一个重叠的五边形图）",
+      "level": "hard",
+      "expected_answer_type": "copy_shape"
+    },
+    {
+      "id": "altz-17",
+      "dimension": "delayed_recall",
+      "text": "还记得刚才那三个词吗？'苹果'、'钥匙'、'手表'——请再说一遍。",
+      "level": "easy",
+      "expected_answer_type": "delayed_recall"
+    },
+    {
+      "id": "altz-18",
+      "dimension": "orientation_week",
+      "text": "请问今天是一周里的第几天？（星期一还是星期二……）",
+      "level": "easy",
+      "expected_answer_type": "day_of_week"
+    },
+    {
+      "id": "altz-19",
+      "dimension": "orientation_season",
+      "text": "请问现在是什么季节？",
+      "level": "easy",
+      "expected_answer_type": "season"
+    },
+    {
+      "id": "altz-20",
+      "dimension": "judgment",
+      "text": "如果遇到火灾，你应该怎么做？请说出三个步骤。",
+      "level": "hard",
+      "expected_answer_type": "problem_solving"
+    }
+  ]
+}

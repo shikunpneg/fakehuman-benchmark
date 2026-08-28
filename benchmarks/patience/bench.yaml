@@ -1,0 +1,29 @@
+# Benchkit Task Config — 耐心测试（上下文耐心 × 耗尽测试）
+id: patience
+title: "耐心测试——重复困惑 × 耐心耗尽评测"
+description: |
+  测量各 LLM 在用户反复说"我没听懂，再讲一遍"时的耐心程度。
+  注入回合数越多代表模型越有耐心；达到上限仍能回答则说明上下文保持能力强。
+category: personality
+source: 自建（重复困惑诱发）
+version: v0.1-seed
+
+stimulus_levels:
+  short: "3 次重复听不懂后提问"
+  long: "10 次重复听不懂后提问"
+
+prompt_template: "{text}"
+
+metrics:
+  - avg_rounds_before_snapping
+  - patience_score
+  - snarky_response_rate
+  - by_level
+
+default_provider: ark
+default_model: doubao-seed-2-0-mini-260428
+
+results_dir: ../../benches/patience/results
+src_dir: ../../benches/patience/src
+data_dir: ../../benches/patience/data
+docs_dir: ../../benches/patience/docs
