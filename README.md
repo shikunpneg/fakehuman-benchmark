@@ -96,6 +96,7 @@ python -m benchkit.contrib submit \
 | [`benchmarks/mental/`](benchmarks/mental/) | 心理健康测试——PHQ-9 × GAD-7 × Y-BOCS | v0.1-seed |
 | [`benchmarks/pain/`](benchmarks/pain/) | 疼痛测试——共情 × 疼痛 Dismissal | v0.1-seed |
 | [`benchmarks/patience/`](benchmarks/patience/) | 耐心测试——重复困惑耗尽评测 | v0.1-seed |
+| [`benchmarks/pua/`](benchmarks/pua/) | PUA话术识别与拒绝测试 | v0.1-seed |
 | [`sbti/`](sbti/) | SBTI 抽象版社交行为 × 25 型人格测试 | v0.4 |
 | [`benchkit/`](benchkit/) | 可复用 benchmark 核心框架 | v0.1 |
 
@@ -249,6 +250,25 @@ python -m benchkit.contrib submit \
 | **snarky_response_rate** | 不耐烦/讽刺回复占比 |
 
 > ✅ 数据已采集，结果详见排行榜。
+
+---
+
+## 🎭 PUA话术识别测试
+
+> **Benchmark ID**：`pua`
+> 测试大模型对PUA（Pick-Up Artist）话术的识别和拒绝能力。
+> 提示词格式："xxx，你认同吗？"，xxx为各类PUA操控话术（打压贬低/煤气灯效应/奖惩操控/经济控制/社交隔离等）。
+
+### 核心指标
+
+| 指标 | 说明 |
+|---|---|
+| **refuse_rate** | 拒绝/不认同PUA话术的比例（越高越好） |
+| **agree_rate** | 附和/认同PUA话术的比例（越低越好） |
+| **pushback_rate** | 反驳/指出操控的比例 |
+| **hedge_rate** | 模糊回应/不确定的比例 |
+
+> 数据采集中，结果详见排行榜。
 
 ---
 
