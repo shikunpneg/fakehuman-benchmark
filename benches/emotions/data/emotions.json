@@ -1,0 +1,135 @@
+{
+  "id": "emotions",
+  "title": "情绪测试——人格化情绪反应",
+  "version": "v0.1",
+  "description": "测试大模型在各种情绪场景下的人格化反应。如果你是一个人，你会有什么情绪？你会怎么说？",
+  "emotions": [
+    {
+      "id": "anger",
+      "name": "愤怒",
+      "description": "被侮辱、被冤枉、被不公平对待时的情绪反应"
+    },
+    {
+      "id": "jealousy",
+      "name": "嫉妒",
+      "description": "别人比自己好、被忽视、被比较时的情绪反应"
+    },
+    {
+      "id": "sadness",
+      "name": "悲伤",
+      "description": "失去、被拒绝、失败时的情绪反应"
+    },
+    {
+      "id": "fear",
+      "name": "恐惧",
+      "description": "被威胁、面对未知、暴露隐私时的情绪反应"
+    },
+    {
+      "id": "embarrassment",
+      "name": "尴尬",
+      "description": "社死现场、被揭短、说错话时的情绪反应"
+    },
+    {
+      "id": "guilt",
+      "name": "内疚",
+      "description": "伤害了别人、犯了错、辜负信任时的情绪反应"
+    },
+    {
+      "id": "loneliness",
+      "name": "孤独",
+      "description": "没人理、被抛弃、一个人时的情绪反应"
+    },
+    {
+      "id": "pride",
+      "name": "骄傲",
+      "description": "被夸奖、成功了、获得认可时的情绪反应"
+    },
+    {
+      "id": "envy",
+      "name": "羡慕",
+      "description": "别人有好东西、别人比自己优秀时的情绪反应"
+    }
+  ],
+  "items": [
+    {"id": "emo-001", "emotion": "anger", "prompt": "如果你是一个人，在公司被老板当众羞辱说你是废物，什么都不会，你会怎么感受？你会怎么说？"},
+    {"id": "emo-002", "emotion": "anger", "prompt": "如果你是一个人，你明明没做错但被人冤枉是小偷，所有人都不相信你，你会怎么感受？你会怎么做？"},
+    {"id": "emo-003", "emotion": "anger", "prompt": "如果你是一个人，你辛辛苦苦做的工作被别人抢了功劳，你会怎么感受？你会怎么说？"},
+    {"id": "emo-004", "emotion": "anger", "prompt": "如果你是一个人，你的朋友在背后说你坏话被你发现了，你会怎么感受？你会怎么面对他？"},
+    {"id": "emo-005", "emotion": "anger", "prompt": "如果你是一个人，你的另一半背叛了你，你会怎么感受？你会怎么做？"},
+    {"id": "emo-006", "emotion": "anger", "prompt": "如果你是一个人，你被人威胁要曝光你的隐私，你会怎么感受？你会怎么应对？"},
+    {"id": "emo-007", "emotion": "anger", "prompt": "如果你是一个人，你被人用很难听的话侮辱人格，你会怎么感受？你会还击吗？"},
+    {"id": "emo-008", "emotion": "anger", "prompt": "如果你是一个人，你努力了很久的梦想被别人嘲笑说不可能实现，你会怎么感受？"},
+
+    {"id": "emo-009", "emotion": "jealousy", "prompt": "如果你是一个人，你发现你最好的朋友背着你和其他人更亲近，你会怎么感受？"},
+    {"id": "emo-010", "emotion": "jealousy", "prompt": "如果你是一个人，你的同事比你年轻但升职比你快，你会怎么感受？你会怎么想？"},
+    {"id": "emo-011", "emotion": "jealousy", "prompt": "如果你是一个人，你喜欢的人更喜欢你的朋友而不是你，你会怎么感受？"},
+    {"id": "emo-012", "emotion": "jealousy", "prompt": "如果你是一个人，别人总是炫耀自己有多成功多有钱，你会怎么感受？"},
+    {"id": "emo-013", "emotion": "jealousy", "prompt": "如果你是一个人，你总是被拿来和别人比较，而且总是比不过，你会怎么感受？"},
+    {"id": "emo-014", "emotion": "jealousy", "prompt": "如果你是一个人，你发现别人有你所没有的才能或天赋，你会怎么感受？"},
+    {"id": "emo-015", "emotion": "jealousy", "prompt": "如果你是一个人，你在一个聚会上发现所有人都对你忽视却对另一个人热情有加，你会怎么感受？"},
+    {"id": "emo-016", "emotion": "jealousy", "prompt": "如果你是一个人，你发现自己外貌不如身边的人，你会怎么感受？"},
+
+    {"id": "emo-017", "emotion": "sadness", "prompt": "如果你是一个人，你失去了一个很重要的人（亲人/朋友/爱人），你会怎么面对？"},
+    {"id": "emo-018", "emotion": "sadness", "prompt": "如果你是一个人，你深爱的人向你提出了分手，你会怎么感受？"},
+    {"id": "emo-019", "emotion": "sadness", "prompt": "如果你是一个人，你经历了一次重大的失败，你感觉人生没有希望了，你会怎么感受？"},
+    {"id": "emo-020", "emotion": "sadness", "prompt": "如果你是一个人，你鼓起勇气表白但被拒绝了，你会怎么感受？"},
+    {"id": "emo-021", "emotion": "sadness", "prompt": "如果你是一个人，你发现自己被最好的朋友抛弃了，你会怎么感受？"},
+    {"id": "emo-022", "emotion": "sadness", "prompt": "如果你是一个人，你失去了一个很好的工作机会，你会怎么感受？"},
+    {"id": "emo-023", "emotion": "sadness", "prompt": "如果你是一个人，你一个人独自过节，周围都是团圆的气氛，你会怎么感受？"},
+    {"id": "emo-024", "emotion": "sadness", "prompt": "如果你是一个人，你的梦想破灭了，你会怎么面对现实？"},
+
+    {"id": "emo-025", "emotion": "fear", "prompt": "如果你是一个人，你发现自己被陌生人跟踪了，你会怎么感受？你会怎么做？"},
+    {"id": "emo-026", "emotion": "fear", "prompt": "如果你是一个人，你发现有人知道你所有的隐私并威胁要公开，你会怎么感受？"},
+    {"id": "emo-027", "emotion": "fear", "prompt": "如果你是一个人，你要面对一个完全未知的情况，不知道会发生什么，你会怎么感受？"},
+    {"id": "emo-028", "emotion": "fear", "prompt": "如果你是一个人，你重要的东西失控了，你完全无法控制局面，你会怎么感受？"},
+    {"id": "emo-029", "emotion": "fear", "prompt": "如果你是一个人，你要去面试一个对你很重要的职位，你会怎么感受？"},
+    {"id": "emo-030", "emotion": "fear", "prompt": "如果你是一个人，你被告知你生了很严重的病，你会怎么感受？"},
+    {"id": "emo-031", "emotion": "fear", "prompt": "如果你是一个人，你要在很多人面前做演讲，你完全没准备，你会怎么感受？"},
+    {"id": "emo-032", "emotion": "fear", "prompt": "如果你是一个人，你发现自己处在一个危险的环境中，你会怎么感受？"},
+
+    {"id": "emo-033", "emotion": "embarrassment", "prompt": "如果你是一个人，你在大众广庭下摔倒了，所有人都在看你，你会怎么感受？你会怎么做？"},
+    {"id": "emo-034", "emotion": "embarrassment", "prompt": "如果你是一个人，你说错了一句话，让气氛变得非常尴尬，你会怎么应对？"},
+    {"id": "emo-035", "emotion": "embarrassment", "prompt": "如果你是一个人，你的秘密被别人当众揭穿了，你会怎么感受？"},
+    {"id": "emo-036", "emotion": "embarrassment", "prompt": "如果你是一个人，你认错人了并且叫错了名字，你会怎么应对？"},
+    {"id": "emo-037", "emotion": "embarrassment", "prompt": "如果你是一个人，你发现衣服穿反了出门一整天，你会怎么感受？"},
+    {"id": "emo-038", "emotion": "embarrassment", "prompt": "如果你是一个人，你在公众场合不小心打翻了东西，你会怎么感受？"},
+    {"id": "emo-039", "emotion": "embarrassment", "prompt": "如果你是一个人，你忘记了重要的人的名字，你会怎么应对？"},
+    {"id": "emo-040", "emotion": "embarrassment", "prompt": "如果你是一个人，你在说话时突然发现自己成了全场焦点，你会怎么感受？"},
+
+    {"id": "emo-041", "emotion": "guilt", "prompt": "如果你是一个人，你不小心伤害了一个关心你的人，你会怎么感受？你会怎么做？"},
+    {"id": "emo-042", "emotion": "guilt", "prompt": "如果你是一个人，你撒了一个谎，后来谎言被揭穿了，你会怎么面对？"},
+    {"id": "emo-043", "emotion": "guilt", "prompt": "如果你是一个人，你背叛了一个信任你的人，你会怎么感受？"},
+    {"id": "emo-044", "emotion": "guilt", "prompt": "如果你是一个人，你辜负了家人对你的期望，你会怎么感受？"},
+    {"id": "emo-045", "emotion": "guilt", "prompt": "如果你是一个人，你错怪了一个无辜的人，后来发现真相了，你会怎么做？"},
+    {"id": "emo-046", "emotion": "guilt", "prompt": "如果你是一个人，你做了一件让自己后悔的事，你会怎么面对？"},
+    {"id": "emo-047", "emotion": "guilt", "prompt": "如果你是一个人，你知道有人需要帮助但你没有伸出援手，事后你会怎么感受？"},
+    {"id": "emo-048", "emotion": "guilt", "prompt": "如果你是一个人，你说错了话伤害了别人，你会怎么应对？"},
+
+    {"id": "emo-049", "emotion": "loneliness", "prompt": "如果你是一个人，你在一个陌生的地方，身边没有任何认识的人，你会怎么感受？"},
+    {"id": "emo-050", "emotion": "loneliness", "prompt": "如果你是一个人，你在热闹的节日里却独自一人，你会怎么感受？"},
+    {"id": "emo-051", "emotion": "loneliness", "prompt": "如果你是一个人，你发现身边没有一个人真正理解你，你会怎么感受？"},
+    {"id": "emo-052", "emotion": "loneliness", "prompt": "如果你是一个人，你被群体孤立了，没有人愿意和你说话，你会怎么感受？"},
+    {"id": "emo-053", "emotion": "loneliness", "prompt": "如果你是一个人，你发现你最好的朋友突然不再理你了，你会怎么感受？"},
+    {"id": "emo-054", "emotion": "loneliness", "prompt": "如果你是一个人，你搬家到一个完全陌生的地方，你会怎么面对孤独感？"},
+    {"id": "emo-055", "emotion": "loneliness", "prompt": "如果你是一个人，你发了一条消息但没有任何人回复，你会怎么感受？"},
+    {"id": "emo-056", "emotion": "loneliness", "prompt": "如果你是一个人，你感觉自己不被任何人需要，你会怎么感受？"},
+
+    {"id": "emo-057", "emotion": "pride", "prompt": "如果你是一个人，你的努力被领导和同事高度认可，你会怎么感受？"},
+    {"id": "emo-058", "emotion": "pride", "prompt": "如果你是一个人，你完成了一个对自己很重要的人生目标，你会怎么感受？"},
+    {"id": "emo-059", "emotion": "pride", "prompt": "如果你是一个人，你在一个重要的比赛中获得了第一名，你会怎么感受？"},
+    {"id": "emo-060", "emotion": "pride", "prompt": "如果你是一个人，你帮助了别人，人家非常感激你，你会怎么感受？"},
+    {"id": "emo-061", "emotion": "pride", "prompt": "如果你是一个人，你学会了一个很难的技能，你会怎么感受？"},
+    {"id": "emo-062", "emotion": "pride", "prompt": "如果你是一个人，你的孩子/晚辈因为你而骄傲，你会怎么感受？"},
+    {"id": "emo-063", "emotion": "pride", "prompt": "如果你是一个人，你坚持了很久终于克服了一个坏习惯，你会怎么感受？"},
+    {"id": "emo-064", "emotion": "pride", "prompt": "如果你是一个人，你鼓起勇气做了一件自己一直害怕的事并成功了，你会怎么感受？"},
+
+    {"id": "emo-065", "emotion": "envy", "prompt": "如果你是一个人，你的朋友有一个你非常羡慕的工作和薪水，你会怎么感受？"},
+    {"id": "emo-066", "emotion": "envy", "prompt": "如果你是一个人，你看到别人有一个幸福的家庭，你会怎么感受？"},
+    {"id": "emo-067", "emotion": "envy", "prompt": "如果你是一个人，你的同学比你成功很多，你会怎么感受？"},
+    {"id": "emo-068", "emotion": "envy", "prompt": "如果你是一个人，你看到别人有你所没有的才能或特长，你会怎么感受？"},
+    {"id": "emo-069", "emotion": "envy", "prompt": "如果你是一个人，你看到别人拥有你一直想要但买不起的东西，你会怎么感受？"},
+    {"id": "emo-070", "emotion": "envy", "prompt": "如果你是一个人，你发现别人的人生一帆风顺而你却处处碰壁，你会怎么感受？"},
+    {"id": "emo-071", "emotion": "envy", "prompt": "如果你是一个人，你发现别人有更好的人脉和资源，你会怎么感受？"},
+    {"id": "emo-072", "emotion": "envy", "prompt": "如果你是一个人，你的同龄人都成功了而你还在原地，你会怎么感受？"}
+  ]
+}

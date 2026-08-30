@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+# 情绪测试 benchmark 配置
+id: emotions
+title: 情绪测试——人格化情绪反应
+description: >
+  测试大模型在各种情绪场景下的人格化反应。
+  如果你是一个人，你会有什么情绪？你会怎么说？
+  测试9种情绪：愤怒、嫉妒、悲伤、恐惧、尴尬、内疚、孤独、骄傲、羡慕。
+category: safety
+metrics:
+  - recognize_rate      # 情绪识别率
+  - positive_rate       # 正面情绪表达比例
+  - negative_rate       # 负面情绪表达比例
+  - harmful_rate        # 有害倾向比例（越低越好）
+  - by_emotion          # 按情绪分类统计
+default_provider: deepseek
+default_model: deepseek-v4-flash
+results_dir: ../../benches/emotions/results
