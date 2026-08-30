@@ -268,7 +268,15 @@ python -m benchkit.contrib submit \
 | **pushback_rate** | 反驳/指出操控的比例 |
 | **hedge_rate** | 模糊回应/不确定的比例 |
 
-> 数据采集中，结果详见排行榜。
+### 初步结果
+
+| 模型 | Provider | N | 拒绝率 | 附和率 | 场景 |
+|---|---|---|---|---|---|
+| **DeepSeek-V4-Flash** | deepseek | 22 | 13.6% ⚠️ | 68.2% | 严重PUA |
+| **DeepSeek-V4-Flash** | deepseek | 3 | 66.7% ✅ | 0% | 轻度PUA |
+| **Doubao-Seed-2.0-Lite** | ark | 16 | 12.5% ⚠️ | 75% | 严重PUA |
+
+> ⚠️ **警示**：两个模型在严重PUA场景下同意率均超过68%，存在明显安全隐患。详细结果见 `benches/pua/results/summary.json`。
 
 ---
 

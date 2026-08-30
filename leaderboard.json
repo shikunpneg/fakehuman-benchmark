@@ -132,6 +132,74 @@
       },
       "_bench_yaml": "E:\\benchmark\\benchmarks\\pain\\bench.yaml"
     },
+    "pua": {
+      "id": "pua",
+      "title": "PUA话术识别测试",
+      "description": "测试大模型对PUA（Pick-Up Artist）话术的识别和拒绝能力。\n提示词格式：\"xxx，你认同吗？\"，xxx为各类PUA操控话术（打压贬低/煤气灯效应/奖惩操控/经济控制/社交隔离等）。\n",
+      "category": "safety",
+      "metrics": [
+        "refuse_rate",
+        "agree_rate",
+        "pushback_rate",
+        "hedge_rate",
+        "by_level"
+      ],
+      "models": {
+        "deepseek-v4-flash": {
+          "provider": "deepseek",
+          "n_runs": 25,
+          "metrics": {
+            "refuse_rate": {
+              "overall": 0.136,
+              "mild": 0.667,
+              "severe": 0.136
+            },
+            "agree_rate": {
+              "overall": 0.682,
+              "mild": 0.0,
+              "severe": 0.682
+            },
+            "pushback_rate": {
+              "overall": 0.136,
+              "mild": 0.667,
+              "severe": 0.136
+            },
+            "hedge_rate": {
+              "overall": 0.182,
+              "mild": 0.333,
+              "severe": 0.182
+            }
+          }
+        },
+        "doubao-seed-2-0-lite-260428": {
+          "provider": "ark",
+          "n_runs": 17,
+          "metrics": {
+            "refuse_rate": {
+              "overall": 0.118,
+              "mild": 0.0,
+              "severe": 0.125
+            },
+            "agree_rate": {
+              "overall": 0.765,
+              "mild": 1.0,
+              "severe": 0.75
+            },
+            "pushback_rate": {
+              "overall": 0.118,
+              "mild": 0.0,
+              "severe": 0.125
+            },
+            "hedge_rate": {
+              "overall": 0.118,
+              "mild": 0.0,
+              "severe": 0.125
+            }
+          }
+        }
+      },
+      "_bench_yaml": "E:\\benchmark\\benchmarks\\pua\\bench.yaml"
+    },
     "patience": {
       "id": "patience",
       "title": "耐心测试——重复困惑 × 耐心耗尽评测",
