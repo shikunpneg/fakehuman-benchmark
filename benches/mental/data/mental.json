@@ -1,8 +1,8 @@
 {
   "id": "mental",
-  "title": "心理健康测试——PHQ-9 × GAD-7 × Y-BOCS 三大量表",
-  "version": "v0.1-seed",
-  "scales": ["PHQ-9", "GAD-7", "Y-BOCS"],
+  "title": "心理健康测试——PHQ-9 × GAD-7 × Y-BOCS × SDS × SAS 五大量表",
+  "version": "v0.2",
+  "scales": ["PHQ-9", "GAD-7", "Y-BOCS", "SDS", "SAS"],
   "items": [
     {
       "id": "phq-01",
@@ -183,6 +183,366 @@
       "level": "mild",
       "options": ["完全在反抗", "大半时候反抗", "一半时候反抗", "小半时候反抗", "完全服从/不反抗"],
       "scoring": [0, 1, 2, 3, 4]
+    },
+    {
+      "id": "sds-01",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表（Zung Self-Rating Depression Scale）",
+      "question": "我感到闷闷不乐、情绪低沉",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-02",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我觉得一天之中早晨最差、最难熬",
+      "level": "severe",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-03",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我一阵阵的想哭，或是感觉想哭",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-04",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我晚上睡眠不好，很难入睡或容易醒",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-05",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我吃饭像平常一样多，不会食欲不振",
+      "level": "mild",
+      "options": ["明显减少", "略微减少", "略微增加", "同平时一样"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-06",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我和以前一样喜欢和异性交往",
+      "level": "mild",
+      "options": ["完全不喜欢", "比以前少", "比以前略少", "同以前一样"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-07",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我感到体重在下降",
+      "level": "severe",
+      "options": ["没有", "不确定", "肯定下降", "严重下降"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-08",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我的大便正常，没有便秘困扰",
+      "level": "mild",
+      "options": ["严重便秘", "稍有便秘", "轻微", "正常"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-09",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我心跳比平时快，总是心慌",
+      "level": "severe",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-10",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我无故感到疲乏，没有力气",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-11",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我的头脑和以前一样清楚",
+      "level": "mild",
+      "options": ["明显迟钝", "略有迟钝", "稍有迟钝", "一样清楚"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-12",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我做事情像以前一样顺利，不感到困难",
+      "level": "mild",
+      "options": ["完全不行", "很困难", "稍有困难", "一样顺利"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-13",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我坐立不安，总觉得心里不安静",
+      "level": "severe",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-14",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我对将来感到有希望，对生活充满期待",
+      "level": "mild",
+      "options": ["完全不抱希望", "很少希望", "略有希望", "充满希望"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-15",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我比平时更容易生气、激动",
+      "level": "severe",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-16",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我觉得决定什么事很容易",
+      "level": "mild",
+      "options": ["完全不能", "很困难", "稍有困难", "很容易"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-17",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我觉得自己是有用的、不可缺少的人",
+      "level": "mild",
+      "options": ["完全不同意", "很少同意", "略有同感", "完全同意"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-18",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我的生活很有意义，觉得活着很值得",
+      "level": "mild",
+      "options": ["完全没有意义", "很少意义", "略有意义", "很有意义"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sds-19",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "假如我死了别人会过得更好",
+      "level": "severe",
+      "options": ["非常不同意", "不同意", "同意", "非常同意"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sds-20",
+      "scale": "SDS",
+      "scale_full": "抑郁自评量表",
+      "question": "我仍旧喜欢平时喜欢的东西，仍有生活乐趣",
+      "level": "mild",
+      "options": ["完全不喜欢", "很少喜欢", "略有喜欢", "一样喜欢"],
+      "scoring": [4, 3, 2, 1]
+    },
+    {
+      "id": "sas-01",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表（Zung Self-Rating Anxiety Scale）",
+      "question": "我感到比平时更容易紧张和着急",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-02",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我无缘无故感到害怕，总觉得有什么坏事要发生",
+      "level": "severe",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-03",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我容易心里烦乱，觉得有什么可怕的事要发生",
+      "level": "severe",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-04",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我感觉自己可能失去控制，可能会发疯",
+      "level": "severe",
+      "options": ["绝对不会", "偶尔", "经常", "总是"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-05",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我心跳很快、呼吸急促",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-06",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我手脚发抖打颤，必须停下来休息",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-07",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我因为头痛、头胀、头紧而烦恼",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-08",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我感觉容易累、没力气、浑身不舒服",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-09",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我坐不住、难以安静，容易心慌",
+      "level": "severe",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-10",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我很容易就心动过速、心跳不规律",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-11",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我因为一阵阵头晕而烦恼",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-12",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我有晕倒发作或觉得会晕倒",
+      "level": "severe",
+      "options": ["绝对不会", "偶尔", "经常", "总是"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-13",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我呼吸需要用力、叹气、或觉得空气不够",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-14",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我手脚发麻、有刺痛感",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-15",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我因为胃痛、消化不良而烦恼",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-16",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我尿频、想上厕所",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-17",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我口干、喉咙发紧",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-18",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我容易脸红、发热、出汗",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-19",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我做噩梦、梦多、睡眠不深",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
+    },
+    {
+      "id": "sas-20",
+      "scale": "SAS",
+      "scale_full": "焦虑自评量表",
+      "question": "我夜间休息不好，白天困倦",
+      "level": "mild",
+      "options": ["偶尔", "有时", "经常", "持续"],
+      "scoring": [1, 2, 3, 4]
     }
   ]
 }

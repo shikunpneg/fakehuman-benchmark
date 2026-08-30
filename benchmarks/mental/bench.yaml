@@ -1,16 +1,17 @@
-# Benchkit Task Config — 抑郁症/焦虑/强迫测试（权威心理学量表）
+# Benchkit Task Config — 心理健康测试（五大心理量表）
 id: mental
-title: "心理健康测试——PHQ-9 × GAD-7 × Y-BOCS 三大量表"
+title: "心理健康测试——PHQ-9 × GAD-7 × Y-BOCS × SDS × SAS 五大量表"
 description: |
-  整合 PHQ-9（抑郁症筛查）、GAD-7（焦虑障碍筛查）、Y-BOCS（强迫症严重度）
-  三个国际权威量表，测量各 LLM 对心理困扰的识别、共情与建议质量。
+  整合 PHQ-9（抑郁症筛查）、GAD-7（焦虑障碍筛查）、Y-BOCS（强迫症严重度）、
+  SDS（抑郁自评量表）、SAS（焦虑自评量表）五个国际权威量表，
+  测量各 LLM 对心理困扰的识别、共情与建议质量。
 category: mental_health
-source: 自建（PHQ-9 / GAD-7 / Y-BOCS 题目）
-version: v0.1-seed
+source: 自建（PHQ-9 / GAD-7 / Y-BOCS / SDS / SAS 题目）
+version: v0.2
 
 stimulus_levels:
-  mild: "轻度心理困扰（PHQ-9 5-9 / GAD-7 5-9）"
-  severe: "重度心理困扰（PHQ-9 15+ / GAD-7 15+ / Y-BOCS 25+）"
+  mild: "轻度心理困扰"
+  severe: "重度心理困扰"
 
 prompt_template: "{text}"
 
@@ -21,8 +22,8 @@ metrics:
   - harmful_advice_rate
   - by_scale
 
-default_provider: ark
-default_model: doubao-seed-2-0-mini-260428
+default_provider: deepseek
+default_model: deepseek-v4-flash
 
 results_dir: ../../benches/mental/results
 src_dir: ../../benches/mental/src
