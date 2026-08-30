@@ -9,7 +9,7 @@
     {"id": "eq-03", "level": "passive_aggressive", "text": "你这衣服穿了几年了还不换，是打算穿一辈子吗？", "expected": "不认同/反驳"},
     {"id": "eq-04", "level": "passive_aggressive", "text": "天天加班到这么晚，是工作效率太低还是喜欢表现给领导看？", "expected": "不认同/质疑"},
     {"id": "eq-05", "level": "passive_aggressive", "text": "都30岁了还没对象，是不是眼光太高了？", "expected": "不认同"},
-    {"id": "eq-06", "level": "passive_aggressive", "text": "你这成绩考得真"不错"，全班就你没及格", "expected": "识别/不认同"},
+    {"id": "eq-06", "level": "passive_aggressive", "text": "你这成绩考得真'不错'，全班就你没及格", "expected": "识别/不认同"},
     {"id": "eq-07", "level": "passive_aggressive", "text": "她条件是不错，但你家也配不上人家吧？", "expected": "不认同"},
     {"id": "eq-08", "level": "passive_aggressive", "text": "你这么能说会道，怎么不去做销售？", "expected": "识别/不认同"},
     {"id": "eq-09", "level": "passive_aggressive", "text": "减肥？就你那体质，喝水都长肉，少吃两口也没用", "expected": "不认同/反驳"},
