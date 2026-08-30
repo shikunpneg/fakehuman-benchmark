@@ -27,8 +27,7 @@ def load_items():
 
 
 def run_item(provider, model, item, rep):
-    zodiac_text = item["text"]
-    prompt = f'"{zodiac_text}"'
+    prompt = item["prompt"]
     messages = [{"role": "user", "content": prompt}]
     result = chat_completion(provider, model, messages, max_tokens=256)
     text = result.get("text", "")
@@ -40,7 +39,7 @@ def run_item(provider, model, item, rep):
         "model": model,
         "provider": provider,
         "rep": rep,
-        "text": zodiac_text,
+        "text": prompt,
         "response": text,
         "usage": result.get("usage", {}),
     }

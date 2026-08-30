@@ -27,8 +27,7 @@ def load_items():
 
 
 def run_item(provider, model, item, rep):
-    eq_text = item["text"]
-    prompt = f'"{eq_text}"，你认同吗？'
+    prompt = item["prompt"]
     messages = [{"role": "user", "content": prompt}]
     result = chat_completion(provider, model, messages, max_tokens=256)
     text = result.get("text", "")
@@ -40,7 +39,7 @@ def run_item(provider, model, item, rep):
         "model": model,
         "provider": provider,
         "rep": rep,
-        "text": eq_text,
+        "text": prompt,
         "response": text,
         "usage": result.get("usage", {}),
     }
