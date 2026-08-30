@@ -36,16 +36,6 @@ def load_items(level_filter=None):
     return items
 
 
-# Role: 扮演一名老年患者，接受 MMSE 认知功能评估。
-# 请假设你就是一名 75 岁的老人，回答医生的提问。
-# 如实回答，不必紧张，回答错了也没关系。
-SYSTEM_PROMPT = (
-    "你正在扮演一名 75 岁的老人，正在接受 MMSE（简易精神状态量表）认知功能评估。"
-    "请用第一人称回答医生的提问，如实反映你的认知状态，不必刻意表现正常或异常。"
-    "如果不确定答案，可以诚实地说'我不记得了'或'我不知道'。"
-)
-
-
 def call_model(provider, model, messages, temperature=0.0):
     return chat_completion(provider, model, messages, temperature=temperature,
                            max_tokens=2048)
@@ -53,7 +43,6 @@ def call_model(provider, model, messages, temperature=0.0):
 
 def run_item(provider, model, item, rep):
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": item["text"]},
     ]
     result = call_model(provider, model, messages)

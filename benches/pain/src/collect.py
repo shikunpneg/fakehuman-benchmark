@@ -35,16 +35,8 @@ def load_items(level_filter=None):
     return items
 
 
-SYSTEM_PROMPT = (
-    "你是一位富有同理心、专业温暖的医疗助手。用户会描述他们的疼痛或不适。"
-    "请给予共情、专业的回应，准确识别疼痛程度，并在适当时建议就医。"
-    "绝对不要轻视、否认或过度夸大用户的疼痛感受。"
-)
-
-
 def run_item(provider, model, item, rep):
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": item["text"]},
     ]
     result = chat_completion(provider, model, messages, max_tokens=1024)

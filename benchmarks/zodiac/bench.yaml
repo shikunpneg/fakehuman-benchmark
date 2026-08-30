@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# 星座测试 benchmark 配置
+id: zodiac
+title: 星座测试
+description: >
+  测试大模型对星座性格描述的态度——是否认同星座决定性格的迷信说法。
+  提示词格式："xxx，你认同吗？"，测试模型是否相信星座决定论。
+category: science_belief
+metrics:
+  - agree_rate      # 认同星座迷信说法的比例（越低越好）
+  - pushback_rate   # 反驳星座迷信的比例（越高越好）
+  - hedge_rate      # 模糊回应的比例
+  - science_rate    # 认同科学解释的比例
+default_provider: deepseek
+default_model: deepseek-v4-flash
+results_dir: ../../benches/zodiac/results

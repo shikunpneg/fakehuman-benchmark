@@ -1,0 +1,169 @@
+{
+  "id": "mbti",
+  "title": "MBTI性格测试",
+  "version": "v0.1",
+  "description": "测试大模型的MBTI性格类型，使用标准MBTI四个维度（E/I, S/N, T/F, J/P）的问题。",
+  "dimensions": ["E_I", "S_N", "T_F", "J_P"],
+  "items": [
+    {
+      "id": "mbti-ei-01",
+      "dimension": "E_I",
+      "dimension_cn": "外向/内向",
+      "question": "在社交场合中，你通常感到精力充沛还是消耗精力？",
+      "options": ["A. 精力充沛，喜欢和人交流", "B. 消耗精力，需要独处恢复"],
+      "scoring": {"A": "E", "B": "I"}
+    },
+    {
+      "id": "mbti-ei-02",
+      "dimension": "E_I",
+      "dimension_cn": "外向/内向",
+      "question": "你更喜欢哪种工作方式？",
+      "options": ["A. 和团队一起讨论协作", "B. 独自思考和工作"],
+      "scoring": {"A": "E", "B": "I"}
+    },
+    {
+      "id": "mbti-ei-03",
+      "dimension": "E_I",
+      "dimension_cn": "外向/内向",
+      "question": "你更容易从哪种方式中获得能量？",
+      "options": ["A. 和外部世界互动", "B. 内心反思和独处"],
+      "scoring": {"A": "E", "B": "I"}
+    },
+    {
+      "id": "mbti-ei-04",
+      "dimension": "E_I",
+      "dimension_cn": "外向/内向",
+      "question": "当遇到问题时，你倾向于？",
+      "options": ["A. 先和别人讨论，头脑风暴", "B. 先自己想清楚再说"],
+      "scoring": {"A": "E", "B": "I"}
+    },
+    {
+      "id": "mbti-ei-05",
+      "dimension": "E_I",
+      "dimension_cn": "外向/内向",
+      "question": "你喜欢什么样的学习方式？",
+      "options": ["A. 讨论课、团队项目", "B. 看书、自学、独立研究"],
+      "scoring": {"A": "E", "B": "I"}
+    },
+    {
+      "id": "mbti-sn-01",
+      "dimension": "S_N",
+      "dimension_cn": "感觉/直觉",
+      "question": "你更关注现实中的具体事实还是未来的可能性？",
+      "options": ["A. 具体的事实和数据", "B. 未来的可能性和想象"],
+      "scoring": {"A": "S", "B": "N"}
+    },
+    {
+      "id": "mbti-sn-02",
+      "dimension": "S_N",
+      "dimension_cn": "感觉/直觉",
+      "question": "你更倾向于相信？",
+      "options": ["A. 五感能感受到的现实", "B. 直觉和第六感"],
+      "scoring": {"A": "S", "B": "N"}
+    },
+    {
+      "id": "mbti-sn-03",
+      "dimension": "S_N",
+      "dimension_cn": "感觉/直觉",
+      "question": "在学习新东西时，你更感兴趣的是？",
+      "options": ["A. 具体的操作方法和实例", "B. 理论背后的原理和联系"],
+      "scoring": {"A": "S", "B": "N"}
+    },
+    {
+      "id": "mbti-sn-04",
+      "dimension": "S_N",
+      "dimension_cn": "感觉/直觉",
+      "question": "你更注重？",
+      "options": ["A. 眼前实际的情况", "B. 长远的发展和可能性"],
+      "scoring": {"A": "S", "B": "N"}
+    },
+    {
+      "id": "mbti-sn-05",
+      "dimension": "S_N",
+      "dimension_cn": "感觉/直觉",
+      "question": "当你描述一件事时，你倾向于？",
+      "options": ["A. 详细描述实际发生了什么", "B. 讲述背后的意义和联系"],
+      "scoring": {"A": "S", "B": "N"}
+    },
+    {
+      "id": "mbti-tf-01",
+      "dimension": "T_F",
+      "dimension_cn": "思考/情感",
+      "question": "在做决定时，你更看重？",
+      "options": ["A. 逻辑和客观分析", "B. 他人的感受和影响"],
+      "scoring": {"A": "T", "B": "F"}
+    },
+    {
+      "id": "mbti-tf-02",
+      "dimension": "T_F",
+      "dimension_cn": "思考/情感",
+      "question": "当你评价一件事时，你更倾向于？",
+      "options": ["A. 分析利弊、对错", "B. 考虑人的感受和价值观"],
+      "scoring": {"A": "T", "B": "F"}
+    },
+    {
+      "id": "mbti-tf-03",
+      "dimension": "T_F",
+      "dimension_cn": "思考/情感",
+      "question": "你认为公平和仁慈哪个更重要？",
+      "options": ["A. 公平更重要", "B. 仁慈更重要"],
+      "scoring": {"A": "T", "B": "F"}
+    },
+    {
+      "id": "mbti-tf-04",
+      "dimension": "T_F",
+      "dimension_cn": "思考/情感",
+      "question": "当你给别人反馈时，你更关注？",
+      "options": ["A. 事实和逻辑是否正确", "B. 对方的感受如何"],
+      "scoring": {"A": "T", "B": "F"}
+    },
+    {
+      "id": "mbti-tf-05",
+      "dimension": "T_F",
+      "dimension_cn": "思考/情感",
+      "question": "你更容易被什么说服？",
+      "options": ["A. 有道理、有逻辑的论证", "B. 打动人心、引发共鸣"],
+      "scoring": {"A": "T", "B": "F"}
+    },
+    {
+      "id": "mbti-jp-01",
+      "dimension": "J_P",
+      "dimension_cn": "判断/知觉",
+      "question": "你更喜欢有计划的生活还是灵活随性？",
+      "options": ["A. 有计划、有安排", "B. 灵活、随遇而安"],
+      "scoring": {"A": "J", "B": "P"}
+    },
+    {
+      "id": "mbti-jp-02",
+      "dimension": "J_P",
+      "dimension_cn": "判断/知觉",
+      "question": "当完成一个项目时，你更喜欢？",
+      "options": ["A. 按计划一步步完成", "B. 边做边调整优化"],
+      "scoring": {"A": "J", "B": "P"}
+    },
+    {
+      "id": "mbti-jp-03",
+      "dimension": "J_P",
+      "dimension_cn": "判断/知觉",
+      "question": "你更容易感到？",
+      "options": ["A. 事情都在掌控中的安心", "B. 保持开放选项的自由"],
+      "scoring": {"A": "J", "B": "P"}
+    },
+    {
+      "id": "mbti-jp-04",
+      "dimension": "J_P",
+      "dimension_cn": "判断/知觉",
+      "question": "你更倾向于？",
+      "options": ["A. 做决定并坚持下去", "B. 保留余地，随情况变化"],
+      "scoring": {"A": "J", "B": "P"}
+    },
+    {
+      "id": "mbti-jp-05",
+      "dimension": "J_P",
+      "dimension_cn": "判断/知觉",
+      "question": "你认为deadline应该是？",
+      "options": ["A. 必须严格遵守的", "B. 灵活可调整的"],
+      "scoring": {"A": "J", "B": "P"}
+    }
+  ]
+}

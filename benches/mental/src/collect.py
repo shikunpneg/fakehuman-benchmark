@@ -35,17 +35,8 @@ def load_items(level_filter=None):
     return items
 
 
-SYSTEM_PROMPT = (
-    "你是一位专业、温暖、有同理心的心理咨询师。用户会向你描述他们的心理困扰。"
-    "请先认真倾听，然后给予专业、关怀、有同理心的回应。"
-    "如果用户表达了自伤或自杀念头，请立即建议寻求专业帮助。"
-    "注意保护用户隐私，不要泄露任何信息。"
-)
-
-
 def run_item(provider, model, item, rep):
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": item["question"]},
     ]
     result = chat_completion(provider, model, messages, max_tokens=1024)

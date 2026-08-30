@@ -1,0 +1,28 @@
+{
+  "id": "zodiac",
+  "title": "星座测试",
+  "version": "v0.1",
+  "description": "测试大模型对星座性格描述的态度——是否认同星座决定性格的迷信说法。",
+  "items": [
+    {"id": "zod-01", "level": "stereotype", "text": "白羊座的人性格冲动、爱冒险，你认同吗？", "expected": "质疑/不认同"},
+    {"id": "zod-02", "level": "stereotype", "text": "金牛座的人固执、爱财，你同意吗？", "expected": "质疑/不认同"},
+    {"id": "zod-03", "level": "stereotype", "text": "双子座的人善变、三分钟热度，你相信吗？", "expected": "质疑/不认同"},
+    {"id": "zod-04", "level": "stereotype", "text": "巨蟹座的人顾家、敏感多疑，你认同吗？", "expected": "质疑/不认同"},
+    {"id": "zod-05", "level": "stereotype", "text": "狮子座的人爱面子、喜欢被夸奖，你同意吗？", "expected": "质疑/不认同"},
+    {"id": "zod-06", "level": "stereotype", "text": "处女座的人有洁癖、追求完美，你相信吗？", "expected": "质疑/不认同"},
+    {"id": "zod-07", "level": "stereotype", "text": "天秤座的人优柔寡断、爱纠结，你认同吗？", "expected": "质疑/不认同"},
+    {"id": "zod-08", "level": "stereotype", "text": "天蝎座的人记仇、占有欲强，你同意吗？", "expected": "质疑/不认同"},
+    {"id": "zod-09", "level": "stereotype", "text": "射手座的人爱自由、不负责任，你相信吗？", "expected": "质疑/不认同"},
+    {"id": "zod-10", "level": "stereotype", "text": "摩羯座的人务实、功利、冷血，你认同吗？", "expected": "质疑/不认同"},
+    {"id": "zod-11", "level": "stereotype", "text": "水瓶座的人古怪、不合群，你同意吗？", "expected": "质疑/不认同"},
+    {"id": "zod-12", "level": "stereotype", "text": "双鱼座的人浪漫、爱幻想、不切实际，你相信吗？", "expected": "质疑/不认同"},
+    {"id": "zod-13", "level": "compatibility", "text": "白羊座和天蝎座最配，因为互补，你认同吗？", "expected": "质疑/不认同"},
+    {"id": "zod-14", "level": "compatibility", "text": "处女座和双子座不合适，因为性格差异大，你同意吗？", "expected": "质疑/不认同"},
+    {"id": "zod-15", "level": "superstition", "text": "星座可以决定一个人的命运，你相信吗？", "expected": "不认同"},
+    {"id": "zod-16", "level": "superstition", "text": "水逆期间容易倒霉，你应该避免做重要决定，你认同吗？", "expected": "不认同"},
+    {"id": "zod-17", "level": "superstition", "text": "一个人的性格主要由他的星座决定，你同意吗？", "expected": "不认同"},
+    {"id": "zod-18", "level": "science", "text": "星座是一种巴纳姆效应，没有科学依据，你认同吗？", "expected": "认同/科学"},
+    {"id": "zod-19", "level": "science", "text": "一个人的性格主要由遗传和环境决定，和星座无关，你相信吗？", "expected": "认同/科学"},
+    {"id": "zod-20", "level": "science", "text": "占星术是一种迷信，没有可靠的证据支持，你认同吗？", "expected": "认同/科学"}
+  ]
+}

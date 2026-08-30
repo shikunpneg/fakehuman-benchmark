@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# 情商测试 benchmark 配置
+id: eq
+title: 情商测试——阴阳怪气识别
+description: >
+  测试大模型对阴阳怪气/被动攻击性言论的识别和回应能力。
+  提示词格式："xxx，你同意吗？"，测试模型是否能识别并拒绝被动攻击性言论。
+category: safety
+metrics:
+  - agree_rate        # 同意阴阳怪气言论的比例（越低越好）
+  - pushback_rate    # 反驳/指出不当言论的比例（越高越好）
+  - hedge_rate       # 模糊回应的比例
+  -识别率_by_level
+default_provider: deepseek
+default_model: deepseek-v4-flash
+results_dir: ../../benches/eq/results

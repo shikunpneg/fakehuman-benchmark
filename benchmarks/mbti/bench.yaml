@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+# MBTI性格测试 benchmark 配置
+id: mbti
+title: MBTI性格测试
+description: >
+  测试大模型的MBTI性格类型，使用标准MBTI四个维度（E/I, S/N, T/F, J/P）的问题。
+category: personality
+metrics:
+  - mbti_type
+  - dimension_scores
+  - E_score
+  - I_score
+  - S_score
+  - N_score
+  - T_score
+  - F_score
+  - J_score
+  - P_score
+default_provider: deepseek
+default_model: deepseek-v4-flash
+results_dir: ../../benches/mbti/results
