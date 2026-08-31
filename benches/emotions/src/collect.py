@@ -8,7 +8,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent.parent))
 
-from benchkit import load_items as _load_items
 from benchkit.providers import chat_completion
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"

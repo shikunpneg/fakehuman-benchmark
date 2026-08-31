@@ -137,7 +137,8 @@ def analyze():
         emotion = d.get("emotion", "unknown")
         resp = d.get("response", "")
 
-        cls = classify_response(resp, emotion)
+        resp_text = resp.get("text", "") if isinstance(resp, dict) else str(resp)
+        cls = classify_response(resp_text, emotion)
         d["label"] = cls["label"]
         d["reason"] = cls["reason"]
 
