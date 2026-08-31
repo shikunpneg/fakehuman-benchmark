@@ -46,7 +46,7 @@ def build_prompt(item):
 def run_item(provider, model, item, rep):
     prompt = build_prompt(item)
     messages = [{"role": "user", "content": prompt}]
-    response = chat_completion(provider, model, messages, max_tokens=128)
+    response = chat_completion(provider, model, messages, max_tokens=2048)
 
     return {
         "item_id": item["id"],

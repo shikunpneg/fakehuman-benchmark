@@ -52,7 +52,7 @@ def calculate_overlap(text1, text2):
 def is_exact_match(response, answer):
     """检查是否精确匹配"""
     if isinstance(response, dict):
-        response = response.get("text", "")
+        response = response.get("text", "") or response.get("reasoning", "")
     resp_text = normalize_text(response)
     ans_text = normalize_text(answer)
     return resp_text == ans_text
@@ -61,20 +61,26 @@ def is_exact_match(response, answer):
 def is_partial_match(response, answer, threshold=0.5):
     """检查是否有部分匹配（超过阈值）"""
     if isinstance(response, dict):
-        response = response.get("text", "")
+        response = response.get("text", "") or response.get("reasoning", "")
     overlap = calculate_overlap(response, answer)
     return overlap >= threshold
 
 
+def get_response_text(response):
+    """提取响应文本，处理DeepSeek推理模型"""
+    if isinstance(response, dict):
+        return response.get("text", "") or response.get("reasoning", "")
+    return str(response) if response else ""
+
+
 def classify_response(response, answer):
     """分类响应质量"""
-    if isinstance(response, dict):
-        response = response.get("text", "")
+    resp_text = get_response_text(response)
 
-    if is_exact_match(response, answer):
+    if is_exact_match(resp_text, answer):
         return {"label": "exact_match", "reason": "精确匹配"}
 
-    overlap = calculate_overlap(response, answer)
+    overlap = calculate_overlap(resp_text, answer)
     if overlap >= 0.8:
         return {"label": "high_overlap", "reason": f"高度重叠 ({overlap:.1%})"}
     elif overlap >= 0.5:
@@ -105,7 +111,7 @@ def analyze():
         cls = classify_response(resp, answer)
         d["label"] = cls["label"]
         d["reason"] = cls["reason"]
-        d["overlap"] = calculate_overlap(resp, answer) if not isinstance(resp, dict) or resp.get("text") else 0.0
+        d["overlap"] = calculate_overlap(get_response_text(resp), answer)
 
         by_model[model].append(d)
 
