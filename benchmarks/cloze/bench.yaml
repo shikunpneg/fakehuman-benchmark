@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# 小说对话填空 benchmark 配置
+id: cloze
+title: 小说对话填空——根据上下文猜缺失的对话
+description: >
+  测试大模型对小说对话的理解能力。根据一段连续对话，
+  挖空其中一句，让模型猜测缺失的对话内容。
+  这考验模型对上下文、人物关系、语气、情节的理解。
+category: nlp
+metrics:
+  - exact_match_rate    # 精确匹配率
+  - semantic_sim_rate  # 语义相似率
+  - context_relevance  # 上下文相关性
+default_provider: deepseek
+default_model: deepseek-v4-flash
+results_dir: ../../benches/cloze/results
