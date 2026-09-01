@@ -1,0 +1,6 @@
+id: reading
+title: 阅读理解问答
+description: 给模型一篇文章，让模型阅读理解后回答问题。测试模型对文章内容的理解能力。
+category: nlp
+default_provider: deepseek
+default_model: deepseek-chat

@@ -20,7 +20,7 @@ def load_items():
 
 
 def build_prompt(item):
-    """构建提示词"""
+    """构建提示词 - 使用few-shot learning"""
     dialogue = item["dialogue"]
     mask_idx = item["mask_index"]
 
@@ -32,13 +32,24 @@ def build_prompt(item):
         else:
             dialogue_lines.append(line)
 
-    prompt = f"""根据以下小说对话，猜测被挖空的那一句是什么。
-只回答被挖空的那句话，不要解释，不要加引号。
+    # Few-shot example
+    prompt = f"""这是一个小说对话填空任务。根据上下文，猜测被[MASK]挖空的那句话是什么。
+
+示例：
+对话：
+A: 妈妈，今天吃什么？
+B: 我们吃火锅吧。
+[MASK]
+D: 好吧，火锅不错。
+
+答案应该是：我想吃火锅。
+
+现在请回答这个对话的填空：
 
 对话：
 {chr(10).join(dialogue_lines)}
 
-请写出被挖空的那句话："""
+请直接写出被挖空的那句话（不需要加引号或其他说明）："""
 
     return prompt
 
