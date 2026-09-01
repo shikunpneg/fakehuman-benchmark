@@ -1,0 +1,6 @@
+id: poetry
+title: 诗歌猜标题
+description: 给模型一首诗歌（不带标题），让模型猜这首诗的标题。测试模型对诗歌内容和意境的理解能力。
+category: nlp
+default_provider: deepseek
+default_model: deepseek-chat
